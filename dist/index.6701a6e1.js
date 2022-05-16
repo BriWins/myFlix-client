@@ -948,14 +948,6 @@ var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 var _mainView = require("./components/main-view/main-view");
 // Import statement to indicate that you need to bundle `./index.scss`
 var _indexScss = require("./index.scss");
-// import { MovieCard} from './components/movie-card';
-/*#__PURE__*/ _jsxRuntime.jsx("components", {
-    __source: {
-        fileName: "src/index.jsx",
-        lineNumber: 5
-    },
-    __self: undefined
-});
 // Main component (will eventually use all the others)
 class MyFlixApplication extends _reactDefault.default.Component {
     render() {
@@ -963,13 +955,13 @@ class MyFlixApplication extends _reactDefault.default.Component {
             className: "my-flix",
             __source: {
                 fileName: "src/index.jsx",
-                lineNumber: 14
+                lineNumber: 13
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsx(_mainView.MainView, {
                 __source: {
                     fileName: "src/index.jsx",
-                    lineNumber: 15
+                    lineNumber: 14
                 },
                 __self: this
             })
