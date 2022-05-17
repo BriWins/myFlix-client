@@ -25777,7 +25777,51 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 class MovieCard extends _reactDefault.default.Component {
     render() {
         const { movie , onMovieClick  } = this.props;
-        return;
+        return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+            __source: {
+                fileName: "src/components/movie-card/movie-card.jsx",
+                lineNumber: 8
+            },
+            __self: this,
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                    className: "movie-title",
+                    onClick: ()=>{
+                        onMovieClick(movie);
+                    },
+                    __source: {
+                        fileName: "src/components/movie-card/movie-card.jsx",
+                        lineNumber: 9
+                    },
+                    __self: this,
+                    children: movie.Title
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("img", {
+                    src: movie.ImgPath,
+                    className: "movie-image",
+                    onClick: ()=>{
+                        onMovieClick(movie);
+                    },
+                    __source: {
+                        fileName: "src/components/movie-card/movie-card.jsx",
+                        lineNumber: 12
+                    },
+                    __self: this
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                    className: "movie-summary",
+                    onClick: ()=>{
+                        onMovieClick(movie);
+                    },
+                    __source: {
+                        fileName: "src/components/movie-card/movie-card.jsx",
+                        lineNumber: 13
+                    },
+                    __self: this,
+                    children: movie.Description
+                })
+            ]
+        }));
     }
 }
 
