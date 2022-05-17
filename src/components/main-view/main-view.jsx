@@ -6,6 +6,8 @@ import {MovieCard} from '../movie-card/movie-card';
 export class MainView extends React.Component {
 
   constructor() {
+    const { movies } = this.state;
+
       super();
       this.state = {
         movies: [],
@@ -30,7 +32,7 @@ export class MainView extends React.Component {
           {selectedMovie
             ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
             : movies.map(movie => (
-              <MovieCard key={movie._id} movie={movieData} onMovieClick={(movie) => { this.setSelectedMovie(movie) }}/>
+              <MovieCard key={movie._id} movie={movies} onMovieClick={(movie) => { this.setSelectedMovie(movie) }}/>
             ))
           }
         </div>
