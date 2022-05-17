@@ -5,17 +5,16 @@ import {MovieCard} from '../movie-card/movie-card';
 
 export class MainView extends React.Component {
 
-  constructor() {
-   // const { movie } = this.state;
-
-      super();
-      this.state = {
-        movies: [
-          {_id: 1, Title: "Black Panther", Description:"American superhero film based on the Marvel Comics character, Black Panther, depicted as the king and protector of the fictional African nation of Wakanda.", ImgPath: 'https://i.pinimg.com/originals/b8/ce/c7/b8cec7d7e348590d72a70c9441fc73e5.jpg'}
-        ],
-        selectedMovie: null
-      };
+  constructor(){
+    super();
+    this.state = {
+      movies: [
+        { _id: 1, Title: 'Inception', Description: 'desc1...', ImgPath: '...'},
+        { _id: 2, Title: 'The Shawshank Redemption', Description: 'desc2...', ImgPath: '...'},
+        { _id: 3, Title: 'Gladiator', Description: 'desc3...', ImgPath: '...'}
+      ]
     }
+  }
   
     setSelectedMovie(newSelectedMovie) {
       this.setState({
@@ -30,16 +29,11 @@ export class MainView extends React.Component {
   
     return (
       <div className="main-view">
-        {/* {selectedMovie
-          ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
-          : movies.map(movie => (
-            <MovieCard key={movie._id} movie={movie} onMovieClick={(movie) => { this.setSelectedMovie(movie) }}/>
-          ))      
-        } */}
-             {movies.map(movie => <div key={movie._id}>{movie.ImgPath}</div>)}
-             {movies.map(movie => <div key={movie._id}>{movie.Description}</div>)}
-             {movies.map(movie => <div key={movie._id}>{movie.Title}</div>)}
-      </div>
+      {movies.map(movie => <div key={movie._id}>{movie.Title}</div>)}
+      {movies.map(movie => <div key={movie._id}>{movie.Description}</div>)}
+      {movies.map(movie => <div key={movie._id}>{movie.ImgPath}</div>)}
+    </div>
     );
 }
-    }
+}
+  
