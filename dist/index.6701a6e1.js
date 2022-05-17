@@ -25184,23 +25184,12 @@ class MainView extends _reactDefault.default.Component {
             movies: [
                 {
                     _id: 1,
-                    Title: 'Inception',
-                    Description: 'desc1...',
-                    ImgPath: '...'
-                },
-                {
-                    _id: 2,
-                    Title: 'The Shawshank Redemption',
-                    Description: 'desc2...',
-                    ImgPath: '...'
-                },
-                {
-                    _id: 3,
-                    Title: 'Gladiator',
-                    Description: 'desc3...',
-                    ImgPath: '...'
-                }
-            ]
+                    Title: "Black Panther",
+                    Description: "American superhero film based on the Marvel Comics character, Black Panther, depicted as the king and protector of the fictional African nation of Wakanda.",
+                    ImgPath: "https://i.pinimg.com/originals/b8/ce/c7/b8cec7d7e348590d72a70c9441fc73e5.jpg"
+                }, 
+            ],
+            selectedMovie: null
         };
     }
     setSelectedMovie(newSelectedMovie) {
@@ -25214,47 +25203,40 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 28
+                lineNumber: 33
             },
             __self: this,
             children: "The list is empty!"
         }));
-        return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+        return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 31
+                lineNumber: 36
             },
             __self: this,
-            children: [
-                movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 32
-                        },
-                        __self: this,
-                        children: movie.Title
-                    }, movie._id)
-                ),
-                movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 33
-                        },
-                        __self: this,
-                        children: movie.Description
-                    }, movie._id)
-                ),
-                movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx("div", {
-                        __source: {
-                            fileName: "src/components/main-view/main-view.jsx",
-                            lineNumber: 34
-                        },
-                        __self: this,
-                        children: movie.ImgPath
-                    }, movie._id)
-                )
-            ]
+            children: selectedMovie ? /*#__PURE__*/ _jsxRuntime.jsx(_movieView.MovieView, {
+                movie: selectedMovie,
+                onBackClick: (newSelectedMovie)=>{
+                    this.setSelectedMovie(newSelectedMovie);
+                },
+                __source: {
+                    fileName: "src/components/main-view/main-view.jsx",
+                    lineNumber: 37
+                },
+                __self: this
+            }) : movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
+                    movie: movie,
+                    onMovieClick: (movie1)=>{
+                        this.setSelectedMovie(movie1);
+                    },
+                    __source: {
+                        fileName: "src/components/main-view/main-view.jsx",
+                        lineNumber: 42
+                    },
+                    __self: this
+                }, movie._id)
+            )
         }));
     }
 }
