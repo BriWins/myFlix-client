@@ -11,3 +11,4 @@ export class MovieCard extends React.Component {
     <div className="movie-summary" onClick={() => { onMovieClick(movie); }}>{movie.Description}</div>;
   }
 }
+
