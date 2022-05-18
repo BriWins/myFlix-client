@@ -40,3 +40,7 @@ const handleRegistration = (e) => {
     </form>
   );
 }
+
+RegistrationView.proptypes = {
+    onRegistration: PropTypes.func.isRequired,
+};
