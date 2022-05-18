@@ -7,32 +7,7 @@ export class MainView extends React.Component {
   constructor() {
     super();
     this.state = {
-      movies: [
-        {
-          _id: 1,
-          Title: "Black Panther",
-          Description:
-            "American superhero film based on the Marvel Comics character, Black Panther, depicted as the king and protector of the fictional African nation of Wakanda.",
-          ImgPath:
-            "https://i.pinimg.com/originals/b8/ce/c7/b8cec7d7e348590d72a70c9441fc73e5.jpg",
-        },
-        {
-          _id: 2,
-          Title: "Mad Max: Fury Road",
-          Description:
-            "In a post-apocalyptic desert wasteland, Fury Road follows Max Rockatansky to flee from cult leader Immortan Joe and his army.",
-          ImgPath:
-            "https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
-        },
-        {
-          _id: 3,
-          Title: "Lady Bird",
-          Description:
-            "A teenager navigates a loving, but turbulent relationship with her mother during her eventful senior year of high school.",
-          ImgPath:
-            "https://m.media-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-        },
-      ],
+      movies: [],
       selectedMovie: null,
     };
   }
