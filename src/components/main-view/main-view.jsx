@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { MovieView } from "../movie-view/movie-view";
 import { MovieCard } from "../movie-card/movie-card";
 
@@ -34,6 +35,18 @@ export class MainView extends React.Component {
       ],
       selectedMovie: null,
     };
+  }
+
+  componentDidMount(){
+    axios.get("https://peaceful-sierra-49110.herokuapp.com/movies")
+      .then(response => {
+        this.setState({
+          movies: response.data
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   setSelectedMovie(newSelectedMovie) {
