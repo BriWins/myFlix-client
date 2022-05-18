@@ -39,5 +39,4 @@ const handleRegistration = (e) => {
       <button type="submit" onClick={handleRegistration}>Submit</button>
     </form>
   );
-
 }
