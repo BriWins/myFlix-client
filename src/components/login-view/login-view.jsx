@@ -26,3 +26,10 @@ export function LoginView(props) {
     </form>
   );
 }
+
+LoginView.propTypes = {
+    user: PropTypes.exact({
+        username: PropTypes.string.isRequired,
+        password: PropTypes.string.isRequired
+    }).isRequired,
+};
