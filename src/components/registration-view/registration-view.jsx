@@ -23,7 +23,10 @@ const handleRegistration = (e) => {
 <Container>
       <Row>
         <Col>
-            <Form>
+        <CardGroup>
+          <Card>
+            <CardGroup>Welcome! Please Register</CardGroup>
+        <Form>
               <Form.Group>
                 <Form.Label>Username:</Form.Label>
                     <Form.Control 
@@ -74,6 +77,9 @@ const handleRegistration = (e) => {
                 </Form.Group>
                 <Button variant="danger" type="submit" onClick={handleRegistration}>Submit</Button>
           </Form>
+          </Card>
+        </CardGroup>
+            
         </Col>
       </Row>
     </Container>
