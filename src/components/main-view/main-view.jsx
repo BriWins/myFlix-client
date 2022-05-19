@@ -8,7 +8,6 @@ import { MovieCard } from "../movie-card/movie-card";
 
 import {Row,Col} from 'react-bootstrap/';
 
-
 export class MainView extends React.Component {
   constructor() {
     super();
@@ -65,7 +64,5 @@ export class MainView extends React.Component {
         }
       </Row>
     );
-      
-        
   }
 }
