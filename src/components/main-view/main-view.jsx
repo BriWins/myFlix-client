@@ -51,9 +51,11 @@ export class MainView extends React.Component {
       <div className="main-view">
         {selectedMovie ? ( 
         <Row>
+          <Col>
           <MovieView movie={selectedMovie} onBackClick={(newSelectedMovie) => {
           this.setSelectedMovie(newSelectedMovie);
         }} />
+          </Col>
         </Row>
         ) 
         : (
