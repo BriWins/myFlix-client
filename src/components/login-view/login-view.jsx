@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button";
 
-import "./login-view.scss"
+import "./login-view.scss";
 
 export function LoginView(props) {
   const [ username, setUsername ] = useState('');
@@ -20,15 +20,18 @@ export function LoginView(props) {
     <Form>
     <Form.Group controlId="formUsername">
       <Form.Label>Username:</Form.Label>
-      <Form.Control type="text" onChange={e => setUsername(e.target.value)} />
+      <Form.Control type="text" placeholder="Example: User123" onChange={e => setUsername(e.target.value)} />
     </Form.Group>
 
     <Form.Group controlId="formPassword">
       <Form.Label>Password:</Form.Label>
-      <Form.Control type="password" onChange={e => setPassword(e.target.value)} />
+      <Form.Control type="password" 
+      aria-describedby="passwordHelpBlock" 
+      placeholder="Example: Password123"
+      onChange={e => setPassword(e.target.value)} />
     </Form.Group>
-    <Button variant="primary" type="submit" onClick={handleSubmit}>
-      Submit</Button>{''}
+    <Button varient="#58d9e1" type="submit" onClick={handleSubmit}>
+      Submit</Button>
   </Form>
   );
 }
