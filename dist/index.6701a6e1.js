@@ -30160,7 +30160,8 @@ function LoginView(props) {
                 },
                 __self: this,
                 children: "Submit"
-            })
+            }),
+            ''
         ]
     }));
 }
