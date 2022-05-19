@@ -951,12 +951,19 @@ var _indexScss = require("./index.scss");
 // Main component (will eventually use all the others)
 class MyFlixApplication extends _reactDefault.default.Component {
     render() {
-        return(/*#__PURE__*/ _jsxRuntime.jsx(_mainView.MainView, {
+        return(/*#__PURE__*/ _jsxRuntime.jsx(Container, {
             __source: {
                 fileName: "src/index.jsx",
                 lineNumber: 13
             },
-            __self: this
+            __self: this,
+            children: /*#__PURE__*/ _jsxRuntime.jsx(_mainView.MainView, {
+                __source: {
+                    fileName: "src/index.jsx",
+                    lineNumber: 14
+                },
+                __self: this
+            })
         }));
     }
 }
@@ -30113,6 +30120,7 @@ function LoginView(props) {
                     }),
                     /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
                         type: "text",
+                        placeholder: "Example: User123",
                         onChange: (e)=>setUsername(e.target.value)
                         ,
                         __source: {
@@ -30141,6 +30149,8 @@ function LoginView(props) {
                     }),
                     /*#__PURE__*/ _jsxRuntime.jsx(_formDefault.default.Control, {
                         type: "password",
+                        "aria-describedby": "passwordHelpBlock",
+                        placeholder: "Example: Password123",
                         onChange: (e)=>setPassword(e.target.value)
                         ,
                         __source: {
@@ -30152,17 +30162,16 @@ function LoginView(props) {
                 ]
             }),
             /*#__PURE__*/ _jsxRuntime.jsx(_buttonDefault.default, {
-                variant: "primary",
+                varient: "#58d9e1",
                 type: "submit",
                 onClick: handleSubmit,
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
-                    lineNumber: 30
+                    lineNumber: 33
                 },
                 __self: this,
                 children: "Submit"
-            }),
-            ''
+            })
         ]
     }));
 }
