@@ -2,8 +2,12 @@
   --button-color: #58d9e1;
 }
 
-button {
-  position: center;
+* {
+  box-sizing: border-box;
+}
+
+Button {
+  align-items: center;
   border: none;
 }
 .my-flix {
