@@ -25238,7 +25238,6 @@ class MainView extends _reactDefault.default.Component {
             __self: this
         }));
         return(/*#__PURE__*/ _jsxRuntime.jsx(_.Row, {
-            id: "#main_row",
             className: "main-view justify-content-md-evenly  align-items-center",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
@@ -42092,6 +42091,7 @@ class MovieCard extends _reactDefault.default.Component {
                             children: movie.Description
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsx(_.Button, {
+                            id: "#movie-card_button",
                             onClick: ()=>onMovieClick(movie)
                             ,
                             variant: "link",

@@ -49,7 +49,7 @@ export class MainView extends React.Component {
     if (movies.length === 0) return <div className="main-view" />;
 
     return (
-      <Row id="#main_row" className="main-view justify-content-md-evenly  align-items-center">
+      <Row className="main-view justify-content-md-evenly  align-items-center">
         {selectedMovie
           ? (
             <Col md={6}>
