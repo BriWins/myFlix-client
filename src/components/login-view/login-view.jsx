@@ -18,33 +18,31 @@ export function LoginView(props) {
   };
 
   return (
-    <Card id="login_card"
+    <Card 
+    id="login_card"
     bg='primary'
     text='white'
     style={{ width: "20rem"}}>
-      <Card.Body>
-        <Card.Title>Welcome, please login!</Card.Title>
-    <Form>
-    <Form.Group controlId="formUsername">
-      <Form.Label>Username:</Form.Label>
-      <Form.Control type="text" placeholder="Example: User123" onChange={e => setUsername(e.target.value)} />
-    </Form.Group>
+          <Card.Body>
+            <Card.Title>Welcome, please login!</Card.Title>
+              <Form>
+                <Form.Group controlId="formUsername">
+                  <Form.Label>Username:</Form.Label>
+                  <Form.Control type="text" placeholder="Example: User123" onChange={e => setUsername(e.target.value)} />
+                </Form.Group>
 
-    <Form.Group controlId="formPassword">
-      <Form.Label>Password:</Form.Label>
-      <Form.Control type="password" 
-      aria-describedby="passwordHelpBlock" 
-      placeholder="Example: Password123"
-      onChange={e => setPassword(e.target.value)} />
-    </Form.Group>
-    <Button varient="danger" type="submit" onClick={handleSubmit}>
-      Submit</Button>
-  </Form>
-  <Card.Text>Don't have an account?
-  <Card.Link href='#'> Register Here!</Card.Link>
-  </Card.Text>
-  </Card.Body>
-  </Card>
+                <Form.Group controlId="formPassword">
+                  <Form.Label>Password:</Form.Label>
+                  <Form.Control type="password" 
+                  aria-describedby="passwordHelpBlock" 
+                  placeholder="Example: Password123"
+                  onChange={e => setPassword(e.target.value)} />
+                </Form.Group>
+                <Button id="login_button" type="submit" onClick={handleSubmit}>Submit</Button>
+              </Form>
+                <Card.Text> Don't have an account?<Card.Link href='#'>Register Here!</Card.Link> </Card.Text>
+            </Card.Body>
+      </Card>
   );
 }
 
