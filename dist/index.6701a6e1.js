@@ -28512,7 +28512,7 @@ function LoginView(props) {
         bg: "primary",
         text: "white",
         style: {
-            width: "18rem"
+            width: "10rem"
         },
         __source: {
             fileName: "src/components/login-view/login-view.jsx",
