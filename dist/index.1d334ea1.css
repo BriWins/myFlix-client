@@ -1,14 +1,5 @@
-:root {
-  --button-color: #58d9e1;
-}
-
 * {
   box-sizing: border-box;
-}
-
-Button {
-  align-items: center;
-  border: none;
 }
 
 .my-flix {

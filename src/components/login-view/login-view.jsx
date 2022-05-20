@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import RegisterView from "../registration-view/registration-view";
 import "./login-view.scss";
 
-import { Form, Button } from "react-bootstrap/";
+import { Form, Button, Card } from "react-bootstrap/";
 
 export function LoginView(props) {
   const [ username, setUsername ] = useState('');
@@ -18,6 +18,12 @@ export function LoginView(props) {
   };
 
   return (
+    <Card id="login_card"
+    bg='primary'
+    text='white'
+    style={{ width: "20rem"}}>
+      <Card.Body>
+        <Card.Title>Welcome, please login!</Card.Title>
     <Form>
     <Form.Group controlId="formUsername">
       <Form.Label>Username:</Form.Label>
@@ -31,9 +37,14 @@ export function LoginView(props) {
       placeholder="Example: Password123"
       onChange={e => setPassword(e.target.value)} />
     </Form.Group>
-    <Button varient="#58d9e1" type="submit" onClick={handleSubmit}>
+    <Button varient="danger" type="submit" onClick={handleSubmit}>
       Submit</Button>
   </Form>
+  <Card.Text>Don't have an account?
+  <Card.Link href='#'> Register Here!</Card.Link>
+  </Card.Text>
+  </Card.Body>
+  </Card>
   );
 }
 

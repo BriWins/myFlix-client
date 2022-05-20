@@ -1,12 +1,9 @@
-:root {
-    --button-color: #58d9e1;
-}
-
-*{
+* {
     box-sizing: border-box;
+    margin: auto auto;
 }
 
-Button {
-    align-items: center;
-    border:none;
+#login_card {
+    margin-top: 15%;
+
 }
