@@ -28473,7 +28473,7 @@ function LoginView(props) {
     const [password, setPassword] = _react.useState('');
     const handleSubmit = (e)=>{
         e.preventDefault();
-        _axiosDefault.default.post("https://peaceful-sierra-49110.herokuapp.com/login", {
+        _axiosDefault.default.post('https://peaceful-sierra-49110.herokuapp.com/login', {
             Username: username,
             Password: password
         }).then((response)=>{
@@ -28555,7 +28555,7 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo"}],"fPT0O":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","axios":"iYoWk","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo","react":"6TuXu"}],"fPT0O":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
