@@ -25238,14 +25238,15 @@ class MainView extends _reactDefault.default.Component {
             __self: this
         }));
         return(/*#__PURE__*/ _jsxRuntime.jsx(_.Row, {
-            className: "main-view justify-content-md-center",
+            id: "#main_row",
+            className: "main-view justify-content-md-evenly  align-items-center",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
                 lineNumber: 52
             },
             __self: this,
             children: selectedMovie ? /*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
-                md: 8,
+                md: 6,
                 __source: {
                     fileName: "src/components/main-view/main-view.jsx",
                     lineNumber: 55
@@ -42050,6 +42051,8 @@ class MovieCard extends _reactDefault.default.Component {
             style: {
                 width: '18rem'
             },
+            bg: "primary",
+            text: "white",
             __source: {
                 fileName: "src/components/movie-card/movie-card.jsx",
                 lineNumber: 12

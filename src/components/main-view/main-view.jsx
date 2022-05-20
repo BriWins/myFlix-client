@@ -49,10 +49,10 @@ export class MainView extends React.Component {
     if (movies.length === 0) return <div className="main-view" />;
 
     return (
-      <Row className="main-view justify-content-md-center">
+      <Row id="#main_row" className="main-view justify-content-md-evenly  align-items-center">
         {selectedMovie
           ? (
-            <Col md={8}>
+            <Col md={6}>
               <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }} />
             </Col>
           )
