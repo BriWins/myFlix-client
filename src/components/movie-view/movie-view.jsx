@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ListGroup, ListGroupItem, Row } from "react-bootstrap";
+import { Card, ListGroup, ListGroupItem, Row, Button, Container, Col } from "react-bootstrap";
 
 export class MovieView extends React.Component {
   
