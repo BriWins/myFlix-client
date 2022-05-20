@@ -22,7 +22,7 @@ export function LoginView(props) {
     id="login_card"
     bg='primary'
     text='white'
-    style={{ width: "18rem"}}>
+    style={{ width: "10rem"}}>
           <Card.Body>
             <Card.Title>Welcome, please login!</Card.Title>
               <Form>
