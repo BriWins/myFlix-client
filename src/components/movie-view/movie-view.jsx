@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { ListGroup, ListGroupItem, Row } from "react-bootstrap";
 
 export class MovieView extends React.Component {
   
@@ -7,28 +8,27 @@ export class MovieView extends React.Component {
     const { movie, onBackClick } = this.props;
 
     return (
-      <div className="movie-view">
-        <div className="movie-image">
-          <img src={movie.ImgPath}/>
-        </div>
-        <div className="movie-title">
-          <span className="label">Title: </span>
-          <span className="value">{movie.Title}</span>
-        </div>
-        <div className="movie-summary">
-          <span className="label">Description: </span>
-          <span className="value">{movie.Description}</span>
-        </div>
-        <div className="movie-genre">
-          <span className="label">Genre: </span>
-          <span className="value">{movie.Genre.Name}</span>
-        </div>
-        <div className="movie-director">
-          <span className="label">Director: </span>
-          <span className="value">{movie.Director.Name}</span>
-        </div>
-      <button onClick={() => { onBackClick(null);}}> Back </button>
-      </div>
+  <Container>
+      <Row>
+          <Col>
+              <Card >
+                  <Card.Body>
+
+                      <Card.Img variant="top" src={movie.ImgPath} />
+                      <Card.Title className="movie-title">{movie.Title}</Card.Title>
+                      <Card.Text className="movie-summary">{movie.Description}</Card.Text>
+
+                  <ListGroup className="list-group-flush">
+                    <ListGroupItem className="movie-genre">Genre: {movie.Genre.Name}</ListGroupItem>
+                    <ListGroupItem className="movie-director">Director: {movie.Director.Name}</ListGroupItem>
+                  </ListGroup>
+
+                  </Card.Body>
+              </Card>
+              <Button onClick={() => { onBackClick(null); }}>Back</Button>
+          </Col>
+      </Row>
+  </Container>
     );
   }
 }
