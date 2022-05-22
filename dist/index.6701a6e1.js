@@ -28516,7 +28516,7 @@ function LoginView(props) {
                 children: [
                     "Username:",
                     /*#__PURE__*/ _jsxRuntime.jsx("input", {
-                        type: "text",
+                        type: "username",
                         value: username,
                         onChange: (e)=>setUsername(e.target.value)
                         ,
