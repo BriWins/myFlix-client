@@ -13,17 +13,14 @@ export class MainView extends React.Component {
       selectedMovie: null,
     };
   }
-
-  componentDidMount(){
-    axios.get("https://afternoon-ravine-04592.herokuapp.com/movies")
-      .then(response => {
-        this.setState({
-          movies: response.data
-        });
-      })
-      .catch(error => {
-        console.log(error);
+  componentDidMount() {
+    let accessToken = localStorage.getItem('token');
+    if (accessToken !== null) {
+      this.setState({
+        user: localStorage.getItem('user')
       });
+      this.getMovies(accessToken);
+    }
   }
 
   setSelectedMovie(newSelectedMovie) {
@@ -83,4 +80,3 @@ export class MainView extends React.Component {
   }
 }
 
-//mongodb+srv://BriWins:Bw913017!!@myflixdb.zieiax7.mongodb.net/?retryWrites=true&w=majority
