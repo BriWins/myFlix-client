@@ -15,7 +15,7 @@ export class MainView extends React.Component {
   }
 
   componentDidMount(){
-    axios.get("https://peaceful-sierra-49110.herokuapp.com/movies")
+    axios.get("https://afternoon-ravine-04592.herokuapp.com/movies")
       .then(response => {
         this.setState({
           movies: response.data
@@ -45,7 +45,7 @@ export class MainView extends React.Component {
   }
 
     getMovies(token) {
-      axios.get("https://peaceful-sierra-49110.herokuapp.com/movies", {
+      axios.get("https://afternoon-ravine-04592.herokuapp.com/movies", {
         headers: {Authorization: 'Bearer ${token}'}
       })
       .then( response => {
