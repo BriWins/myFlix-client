@@ -28,9 +28,12 @@ export function LoginView(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(username, password);
+   const isReq = validate();
+   if(isReq){
+     axios.post("")
     /* Send a request to the server for authentication */
     props.onLoggedIn(username);
+  }
   };
 
   return (
