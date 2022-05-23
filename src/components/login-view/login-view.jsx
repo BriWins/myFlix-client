@@ -22,19 +22,29 @@ export function LoginView(props) {
       setUsernameErr("Username must be 6 characters long");
       isReq = false;
     }
-
-    return isReq;
+     return isReq;
   }
 
-  const handleSubmit = (e) => {
+ 
+ const handleSubmit = (e) => {
     e.preventDefault();
-   const isReq = validate();
-   if(isReq){
-     axios.post("")
-    /* Send a request to the server for authentication */
-    props.onLoggedIn(username);
-  }
+    const isReq = validate();
+    if(isReq) {
+      /* Send request to the server for authentication */
+      axios.post("https://morning-mountain-10723.herokuapp.com/login", {
+          Username: username,
+          Password: password
+      })
+      .then(response =>{
+          const data = response.data;
+          props.onLoggedIn(data);
+      })
+      .catch(e => {
+        console.log('no such user')
+      });
+    }
   };
+  
 
   return (
     <Card 
