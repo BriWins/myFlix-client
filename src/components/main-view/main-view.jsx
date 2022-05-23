@@ -82,3 +82,5 @@ export class MainView extends React.Component {
     );
   }
 }
+
+//mongodb+srv://BriWins:Bw913017!!@myflixdb.zieiax7.mongodb.net/?retryWrites=true&w=majority
