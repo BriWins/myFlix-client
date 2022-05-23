@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import {Form,Button,Card} from "react-bootstrap/";
 
 import axios from "axios";
 
@@ -25,13 +25,14 @@ export function LoginView(props) {
 
 
   return (
+  
 <Form>
-  <Form.Group className="mb-3">
+  <Form.Group controlId="formUsername">
     <Form.Label>Username</Form.Label>
     <Form.Control type="text" placeholder="Enter username" />
   </Form.Group>
 
-  <Form.Group className="mb-3">
+  <Form.Group controlId="formPassword">
     <Form.Label>Password</Form.Label>
     <Form.Control type="password" placeholder="Enter password" />
   </Form.Group>
@@ -42,7 +43,7 @@ export function LoginView(props) {
   Login
   </Button>
 </Form>
-    
+
   );
 
   // return (
