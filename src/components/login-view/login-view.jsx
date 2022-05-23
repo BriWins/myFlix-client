@@ -10,6 +10,22 @@ export function LoginView(props) {
   const [ username, setUsername ] = useState('');
   const [ password, setPassword ] = useState('');
 
+  const [ usernameErr, setUsernameErr ] = useState("");
+  const [ passwordErr, setPasswordErr ] = useState("");
+
+  const validate = () => {
+    let isReq = true;
+    if (!username){
+      setUsernameErr("Username Required");
+      isReq = false;
+    } else if (username.length < 6 ){
+      setUsernameErr("Username must be 6 characters long");
+      isReq = false;
+    }
+
+    return isReq;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(username, password);
