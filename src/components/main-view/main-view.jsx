@@ -35,6 +35,11 @@ export class MainView extends React.Component {
   }
 
 
+  setSelectedMovie(newSelectedMovie) {
+    this.setState({
+      selectedMovie: newSelectedMovie,
+    });
+  }
   
 
   componentDidMount() {
@@ -47,11 +52,6 @@ export class MainView extends React.Component {
     }
   }
 
-  setSelectedMovie(newSelectedMovie) {
-    this.setState({
-      selectedMovie: newSelectedMovie,
-    });
-  }
 
   onLoggedIn(authData) {
     console.log(authData);

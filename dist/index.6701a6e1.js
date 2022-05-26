@@ -3764,6 +3764,11 @@ class MainView extends _reactDefault.default.Component {
             console.log(error);
         });
     }
+    setSelectedMovie(newSelectedMovie) {
+        this.setState({
+            selectedMovie: newSelectedMovie
+        });
+    }
     componentDidMount() {
         let accessToken = localStorage.getItem('token');
         if (accessToken !== null) {
@@ -3772,11 +3777,6 @@ class MainView extends _reactDefault.default.Component {
             });
             this.getMovies(accessToken);
         }
-    }
-    setSelectedMovie(newSelectedMovie) {
-        this.setState({
-            selectedMovie: newSelectedMovie
-        });
     }
     onLoggedIn(authData) {
         console.log(authData);
