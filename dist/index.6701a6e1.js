@@ -3773,7 +3773,7 @@ class MainView extends _reactDefault.default.Component {
         this.getMovies(authData.token);
     }
     getMovies(token) {
-        _axiosDefault.default.get("https://afternoon-ravine-04592.herokuapp.com/movies", {
+        _axiosDefault.default.get("https://morning-mountain-10723.herokuapp.com/movies", {
             headers: {
                 Authorization: 'Bearer ${token}'
             }
@@ -7052,7 +7052,7 @@ function LoginView(props) {
     const [password, setPassword] = _react.useState('');
     const handleSubmit = (e)=>{
         e.preventDefault();
-        _axiosDefault.default.post("https://afternoon-ravine-04592.herokuapp.com/login?Username=${username}&Password=${password}").then((response)=>{
+        _axiosDefault.default.post("https://stark-oasis-54313.herokuapp.com/login?Username=${username}&Password=${password}").then((response)=>{
             const data = response.data;
             props.onLoggedIn(data);
         }).catch((e1)=>{
@@ -7180,7 +7180,7 @@ $RefreshReg$(_c, "LoginView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","axios":"iYoWk","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo","react-bootstrap/":"h2YVd"}],"fPT0O":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo","react-bootstrap/":"h2YVd","axios":"iYoWk"}],"fPT0O":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
