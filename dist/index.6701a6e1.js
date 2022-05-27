@@ -41753,6 +41753,7 @@ class MovieCard extends _reactDefault.default.Component {
                     children: movie.Title
                 }),
                 /*#__PURE__*/ _jsxRuntime.jsx("img", {
+                    crossorigin: "anonymous",
                     src: movie.ImgPath,
                     className: "movie-image",
                     onClick: ()=>{
