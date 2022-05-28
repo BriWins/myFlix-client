@@ -1,15 +1,24 @@
 import axios from "axios";
 import { useState } from "react";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import "./registration-view.scss"
 import { Form, Button } from "react-bootstrap/";
 
-export function LoginView(props) {
+export function RegistrationView(props) {
     const [ username, setUsername ] = useState("");
     const [ password, setPassword ] = useState("");
+    const [ email, setEmail ] = useState("");
+    const [ birthdate, setBirthdate ] = useState("");
+    //const [ favorites, setFavorites ] = useState("");
     
     /* a hook is declared for each input*/
 
     const [ usernameErr, setUsernameErr ] = useState("");
     const [ passwordErr, setPasswordErr ] = useState("");
+    const [ emailErr, setEmailErr ] = useState("");
+    const [ birthdateErr, setBirthdateErr ] = useState("");
+    
 
      /* validating user inputs*/
 
@@ -27,6 +36,13 @@ export function LoginView(props) {
              isReq = false;
          } else if (password.length < 8){
              setPasswordErr("Password must be 8 characters long");
+             isReq = false;
+         }
+         if(!email){
+             setPasswordErr("Email Required");
+             isReq = false;
+         } else if (email.indexOf("@") === -1){
+             setEmailErr("Please enter a valid email address");
              isReq = false;
          }
          return isReq;
