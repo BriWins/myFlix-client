@@ -1,9 +1,13 @@
 import React from "react";
 import axios from "axios";
+import { BrowserRouter } from "react-router-dom";
 
 import { LoginView } from "../login-view/login-view";
 import { MovieView } from "../movie-view/movie-view";
 import { MovieCard } from "../movie-card/movie-card";
+import { RegistrationView } from "../registration-view/registration-view";
+
+import { Row, Col } from "react-bootstrap/"
 
 export class MainView extends React.Component {
   constructor() {
@@ -57,26 +61,34 @@ export class MainView extends React.Component {
   
 
   render() {
-    const { movies, selectedMovie, user } = this.state;
-
-    if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
+    const { movies, user } = this.state;
+    if (!user) return 
+    <Row>
+      <Col>
+      <LoginView onLoggedIn={user => this.onLoggedIn(user)}/>
+      </Col>
+    </Row>
 
     if (movies.length === 0) return <div className="main-view" />;
 
     return (
-      <div className="main-view">
-        {selectedMovie ? ( <MovieView movie={selectedMovie} onBackClick={(newSelectedMovie) => {
-              this.setSelectedMovie(newSelectedMovie);
-        }} />) 
-        : (
-          movies.map((movie) => (
-            <MovieCard key={movie._id} movie={movie} onMovieClick={(movie) => {
-                this.setSelectedMovie(movie);
-          }}/>
-        ))
-        )}
-      </div>
-    );
+      <Router>
+        <Row className="main-view justify-content-md-center">
+          <Route exact path="/" render ={ () => {
+            return movies.map(m => (
+              <Col md={3} key={m._id}>
+                <MovieCard movie={m} />
+              </Col>
+            ))
+          }} />
+          <Route path="/movies/:movieId" render={({ match }) => {
+            return <Col md={8}>
+              <MovieView movie={movies.find(m => m._id === match.params.movieID)} />
+            </Col>
+          }} />
+        </Row>
+      </Router>
+    )
   }
 }
 
