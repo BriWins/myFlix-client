@@ -54,17 +54,22 @@ const handleSubmit = (e) => {
     const isReq = validate();
     if(isReq) {
       /* Send request to the server for authentication */
-      axios.post('YOUR_API_URL/login', {
+      axios.post("https://stark-oasis-54313.herokuapp.com/users/register", {
           Username: username,
-          Password: password
+          Password: password,
+          Email: email,
+          Birthdate: birthdate
       })
       .then(response =>{
           const data = response.data;
-          props.onLoggedIn(data);
+         console.log(data);
+         alert("Registration successful, please login!");
+         window.open("/","_self");
       })
-      .catch(e => {
-        console.log('no such user')
-      });
+      .catch(response => {
+          console.error(response);
+          alert("unable to register")
+      })
     }
   };
   
