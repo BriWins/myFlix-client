@@ -3,7 +3,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./registration-view.scss"
-import { Form, Button } from "react-bootstrap/";
+import { Form, Button, Row, Col, Container } from "react-bootstrap/";
 
 export function RegistrationView(props) {
     const [ username, setUsername ] = useState("");
@@ -112,3 +112,12 @@ const handleSubmit = (e) => {
       </Row>
     )
   }
+
+  RegistrationView.PropTypes = {
+      register: PropTypes.shape({
+          Username: PropTypes.string.isRequired,
+          Password: PropTypes.string.isRequired,
+          Email: PropTypes.string.isRequired,
+          Birthdate: PropTypes.string
+      })
+  };
