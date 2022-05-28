@@ -39,7 +39,7 @@ export function RegistrationView(props) {
              isReq = false;
          }
          if(!email){
-             setPasswordErr("Email Required");
+             setEmailErr("Email Required");
              isReq = false;
          } else if (email.indexOf("@") === -1){
              setEmailErr("Please enter a valid email address");
@@ -74,6 +74,8 @@ const handleSubmit = (e) => {
   };
   
     return (
+        <Row>
+            <Col>
       <Form>
         <Form.Group controlId="formUsername">
           <Form.Label>Username:</Form.Label>
@@ -84,13 +86,29 @@ const handleSubmit = (e) => {
   
         <Form.Group controlId="formPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} />
+          <Form.Control type="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.target.value)} />
           {/* code added here to display validation error */}
           {passwordErr && <p>{passwordErr}</p>}
+  </Form.Group>
+        <Form.Group controlId="formEmail">
+          <Form.Label>Email Address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email address" value={email} onChange={e => setEmail(e.target.value)} />
+          {/* code added here to display validation error */}
+          {emailErr && <p>{emailErr}</p>}
+  </Form.Group>
+        <Form.Group controlId="formBirthdate">
+          <Form.Label>Date of Birth</Form.Label>
+          <Form.Control type="birthdate" placeholder="Date of Birth is optional" value={birthdate} onChange={e => setBirthdate(e.target.value)} />
+          {/* code added here to display validation error */}
+          {birthdateErr && <p>{birthdateErr}</p>}
   </Form.Group>
         <Button variant="primary" type="submit" onClick={handleSubmit}>
           Submit
           </Button>
+          <p></p>
+          <p>Already Registered? <Link to={"/"}> Sign In</Link> here!</p>
       </Form>
+      </Col>
+      </Row>
     )
   }
