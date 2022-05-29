@@ -77,7 +77,7 @@ export class MainView extends React.Component {
         <Menu user={user} />
         <Container>
         <Row className="main-view justify-content-md-center">
-          <Route path="/register" render {() => {
+          <Route path="/register" render={() => {
           if (user) return <Redirect to="/" /> 
           return 
         <Col lg={8} md={8}>
