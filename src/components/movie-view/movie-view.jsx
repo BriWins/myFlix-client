@@ -1,5 +1,7 @@
 import React from "react";
-import { Card, Row, Container, Col, Link, Button  } from "react-bootstrap/";
+import { Card, Row, Container, Col, Button  } from "react-bootstrap/";
+
+import { Link } from "react-router-dom";
 
 export class MovieView extends React.Component {
   
