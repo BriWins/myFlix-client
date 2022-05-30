@@ -60,7 +60,7 @@ return (
         <Col className="label">Date of Birth:</Col>
         <Col className="value">{user.Birthdate}</Col>
         </Row>
-        <Row className="mt-5"><h4>{user.Username} favorite movies list:</h4></Row>
+        <Row className="mt-5"><h4>{user.Username} Your favorite movies list:</h4></Row>
         <Row className="mt-3">
           <FavoriteMoviesView 
           movies={movies} 
