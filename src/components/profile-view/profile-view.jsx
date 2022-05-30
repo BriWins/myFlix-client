@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./profile-view.scss";
 import {UpdateView} from "./update-view";
-import {UserView} from "./user-view";
 import {FavoriteView} from "./favorite-view";
 
 import { Button, Form, Card, Nav } from "react-bootstrap/";
