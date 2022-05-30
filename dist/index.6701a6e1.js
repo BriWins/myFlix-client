@@ -44199,7 +44199,7 @@ class MovieCard extends _reactDefault.default.Component {
                     src: movie.ImgPath,
                     className: "movie-image",
                     onClick: ()=>{
-                        onMovieClick(movie);
+                        onClick.movie;
                     },
                     __source: {
                         fileName: "src/components/movie-card/movie-card.jsx",
@@ -44265,8 +44265,7 @@ MovieCard.propTypes = {
         Title: _propTypesDefault.default.string.isRequired,
         Description: _propTypesDefault.default.string.isRequired,
         ImgPath: _propTypesDefault.default.string.isRequired
-    }).isRequired,
-    onMovieClick: _propTypesDefault.default.func.isRequired
+    }).isRequired
 };
 
   $parcel$ReactRefreshHelpers$4249.postlude(module);

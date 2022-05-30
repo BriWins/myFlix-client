@@ -10,7 +10,7 @@ export class MovieCard extends React.Component {
     return (
           <Card>
               <Card.Img crossorigin="anonymous" src={movie.ImgPath} className="movie-image" 
-              onClick={() => { onMovieClick(movie);}}/>
+              onClick={() => {(onClick.movie);}}/>
               <Card.Body>
                 <Card.Title> {movie.Title} </Card.Title>
                 <Card.Text> {movie.Description}</Card.Text>
@@ -29,5 +29,5 @@ MovieCard.propTypes = {
   Description: PropTypes.string.isRequired,
   ImgPath: PropTypes.string.isRequired
   })
-  .isRequired, onMovieClick: PropTypes.func.isRequired
+  .isRequired 
 };
