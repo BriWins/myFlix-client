@@ -10,7 +10,7 @@ import { DirectorView } from "../director-view/director-view";
 import { GenreView } from "../genre-view/genre-view";
 import { ProfileView } from "../profile-view/profile-view";
 import { UserUpdate } from "/profile-view/user-update";
-import "./main-view.scss"
+
 
 import { Row, Col } from "react-bootstrap/"
 
