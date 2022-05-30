@@ -40,7 +40,7 @@ export function ProfileView(props) {
             }).
             catch(error => console.error(error))
           }
-}
+
 
 return (
     <Container id="profile-form">
@@ -72,5 +72,4 @@ return (
         <UpdateView user={user}/>
         <Button className="d-block mt-5" variant="warning" onClick={handleDelete}>Delete profile</Button>
     </Container>
-  )
-}
+  )}
