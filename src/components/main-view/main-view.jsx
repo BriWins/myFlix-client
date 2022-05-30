@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Menu from "../Menu/Menu";
 
 import { LoginView } from "../login-view/login-view";
@@ -73,12 +73,11 @@ export class MainView extends React.Component {
         <Container>
         <Row className="main-view justify-content-md-center">
           <Route path="/register" render={() => {
-          if (user) return <Redirect to="/" /> 
-          return 
-        <Col lg={8} md={8}>
-          <RegistrationView/>
-        </Col>
-        }} />
+          if (user) return <Redirect to="/" />
+           return <Col>
+          <RegistrationView />
+      </Col>
+}} />
 
           <Route exact path="/" render ={ () => {
              if (!user) return 
