@@ -1,14 +1,16 @@
 import React from "react";
 import axios from "axios";
+import Menu from "../Menu/Menu";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-
 import { LoginView } from "../login-view/login-view";
 import { MovieView } from "../movie-view/movie-view";
 import { MovieCard } from "../movie-card/movie-card";
 import { RegistrationView } from "../registration-view/registration-view";
 import { DirectorView } from "../director-view/director-view";
 import { GenreView } from "../genre-view/genre-view";
-
+import { ProfileView } from "../profile-view/profile-view";
+import { UserUpdate } from "/profile-view/user-update";
+import "./main-view.scss"
 
 import { Row, Col } from "react-bootstrap/"
 
@@ -118,7 +120,7 @@ export class MainView extends React.Component {
               onBackClick={() => history.goBack()}/>
             </Col>
           }} />
-          
+
       <Route exact path={"/users/${user}"} render={({ match, history }) => {
         if (!user) return <Redirect to="/"/>
       return <Col>
