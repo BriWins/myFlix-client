@@ -11,7 +11,7 @@ import { ProfileView } from "../profile-view/profile-view";
 import { UserUpdate } from "../profile-view/update-view";
 
 
-import { Row, Col } from "react-bootstrap/"
+import { Row, Col, Container } from "react-bootstrap/"
 
 export class MainView extends React.Component {
 
