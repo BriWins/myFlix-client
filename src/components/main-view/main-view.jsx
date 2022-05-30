@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import Menu from "../Menu/Menu";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { LoginView } from "../login-view/login-view";
 import { MovieView } from "../movie-view/movie-view";
