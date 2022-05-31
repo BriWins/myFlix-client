@@ -44,23 +44,28 @@ export function ProfileView(props) {
 return (
     <Container id="profile-form">
       <Row><h4>Your profile</h4></Row>
-      <Row>
-        <Col className="label">Username:</Col>
-        <Col className="value">{user.Username}</Col>
+        <Row>
+          <Col className="label">Username:</Col>
+          <Col className="value">{user.Username}</Col>
         </Row>
+
         <Row className="mt-3">
-        <Col className="label">Password:</Col>
-        <Col className="value">******</Col>
+          <Col className="label">Password:</Col>
+          <Col className="value">******</Col>
         </Row>
+
         <Row className="mt-3">
-        <Col className="label">Email Address:</Col>
-        <Col className="value">{user.Email}</Col>
+          <Col className="label">Email Address:</Col>
+          <Col className="value">{user.Email}</Col>
         </Row>
+
         <Row className="mt-3">
-        <Col className="label">Date of Birth:</Col>
-        <Col className="value">{user.Birthdate}</Col>
+          <Col className="label">Date of Birth:</Col>
+          <Col className="value">{user.Birthdate}</Col>
         </Row>
+
         <Row className="mt-5"><h4>{user.Username} Your favorite movies list:</h4></Row>
+
         <Row className="mt-3">
           <FavoriteMoviesView 
           movies={movies} 
@@ -68,6 +73,7 @@ return (
           currentUser={currentUser} 
           token={token}/>
         </Row>
+        
         <UpdateView user={user}/>
         <Button className="d-block mt-5" variant="warning" onClick={handleDelete}>Delete profile</Button>
     </Container>
