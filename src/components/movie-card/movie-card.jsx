@@ -6,7 +6,9 @@ import { Button, Card } from "react-bootstrap/";
 
 export class MovieCard extends React.Component {
   render() {
-      const { movie } = this.props;
+
+    const { movie } = this.props;
+
     return (
           <Card>
               <Card.Img crossorigin="anonymous" src={movie.ImgPath} className="movie-image" 
@@ -14,7 +16,7 @@ export class MovieCard extends React.Component {
               <Card.Body>
                 <Card.Title> {movie.Title} </Card.Title>
                 <Card.Text> {movie.Description}</Card.Text>
-                  <Link to={ `/movies/${movie._id}`}>
+                  <Link to={ `/movies/${movie._id}` }>
                     <Button variant="link">Open</Button>
                   </Link>
               </Card.Body>
