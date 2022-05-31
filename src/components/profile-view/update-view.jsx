@@ -80,27 +80,31 @@ export function RegistrationView(props) {
             <Col sm="10" md="8" lg="6">
               <Form>
                 <Form.Group controlId="formUsername">
-                  <Form.Label>Username:</Form.Label>
-                  <Form.Control type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder="Username" required/>
-                  {/* display validation error */}
-                  {values.usernameErr && <p>{values.usernameErr}</p>}
+                    <Form.Label>Username:</Form.Label>
+                    <Form.Control type="text" value={username} onChange={e => setUsername(e.target.value)} placeholder="Username" required/>
+                    {/* display validation error */}
+                    {values.usernameErr && <p>{values.usernameErr}</p>}
                   </Form.Group>
+
                   <Form.Group controlId="formPassword">
-                    <Form.Label>Password:</Form.Label>
-                    <Form.Control type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" required />
-                    {/* display validation error */}
-                    {values.passwordErr && <p>{values.passwordErr}</p>}
+                      <Form.Label>Password:</Form.Label>
+                      <Form.Control type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" required />
+                      {/* display validation error */}
+                      {values.passwordErr && <p>{values.passwordErr}</p>}
                   </Form.Group>
+
                   <Form.Group controlId="formEmail">
-                    <Form.Label>Email Address:</Form.Label>
-                    <Form.Control type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" required />
-                    {/* display validation error */}
-                    {values.emailErr && <p>{values.emailErr}</p>}
+                      <Form.Label>Email Address:</Form.Label>
+                      <Form.Control type="text" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" required />
+                      {/* display validation error */}
+                      {values.emailErr && <p>{values.emailErr}</p>}
                   </Form.Group>
+
                   <Form.Group controlId="formBirthdate">
                     <Form.Label>Date of Birth:</Form.Label>
                     <Form.Control type="text" value={birthdate} onChange={e => setBirthdate(e.target.value)} placeholder="XX/XX/XXXX" />
                   </Form.Group>
+                  
                   <Form.Group controlId="formBirthdate" className="mt-3">
                     <Button  variant="warning" type="submit" onClick={handleSubmit}>Edit profile</Button>
                   </Form.Group>
