@@ -38,17 +38,17 @@ export function FavoriteView(props) {
                     <Card.Img variant="top" src={movie.ImagePath} />
                   </Link>
                   <Card.Body>
-                    <Card.Title>{movie.Title}</Card.Title>
-                    <Card.Text>{movie.Description}</Card.Text>
-                    <Link to={`/movies/${movie._id}`}>
-                      <Button className="button" variant="outline-primary" size="sm">Open</Button>
-                    </Link>
-                    <Button 
-                    className="button ml-2" 
-                    variant="outline-primary" 
-                    size="sm" onClick={()=> {handleMovieDelete(movie._id)}} >
-                      Remove
-                    </Button>
+                      <Card.Title>{movie.Title}</Card.Title>
+                      <Card.Text>{movie.Description}</Card.Text>
+                        <Link to={`/movies/${movie._id}`}>
+                          <Button className="button" variant="outline-primary" size="sm">Open</Button>
+                        </Link>
+                        <Button   
+                        className="button ml-2" 
+                        variant="outline-primary" 
+                        size="sm" onClick={()=> {handleMovieDelete(movie._id)}} >
+                          Remove
+                        </Button>
                   </Card.Body>
                 </Card>
               </Col>
