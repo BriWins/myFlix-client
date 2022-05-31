@@ -24,24 +24,23 @@ export class MovieView extends React.Component {
       <Container>
         <Row>
           <Col>
-          <Card>
-            <Card.Body>
-            <Card.Img crossorigin="anonymous" src={movie.ImgPath} className="movie-image"/>
-            <Card.Title>{movie.Title}</Card.Title>
-            <Card.Text> {movie.Description} </Card.Text>
-            <Link to={`/directors/${movie.Director.Name}`}>
-            <Button variant="link">Director</Button>
-            </Link>
-            <Link to={`/genres/${movie.Genre.Name}`}>
-            <Button variant="link">Genre</Button>
-            </Link>
-            </Card.Body>
-      <button onClick={() => { onBackClick(null);}}> Back </button>
-      
-      </Card>
-      </Col>
+            <Card>
+              <Card.Body>
+                <Card.Img crossorigin="anonymous" src={movie.ImgPath} className="movie-image"/>
+                <Card.Title>{movie.Title}</Card.Title>
+                <Card.Text> {movie.Description} </Card.Text>
+                <Link to={`/directors/${movie.Director.Name}`}>
+                <Button variant="link">Director</Button>
+                </Link>
+                <Link to={`/genres/${movie.Genre.Name}`}>
+                <Button variant="link">Genre</Button>
+                </Link>
+              </Card.Body>
+              <Button onClick={() => { onBackClick(null);}}> Back </Button>
+            </Card>
+        </Col>
       </Row>
-      </Container>
+    </Container>
     );
   }
 
