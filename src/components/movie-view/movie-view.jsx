@@ -4,6 +4,18 @@ import { Card, Row, Container, Col, Button  } from "react-bootstrap/";
 import { Link } from "react-router-dom";
 
 export class MovieView extends React.Component {
+
+  keypressCallback(event) {
+    console.log(event.key);
+  }
+
+  componentDidMount() {
+    document.addEventListener("keypress", this.keypressCallback);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keypress", this.keypressCallback);
+  }
   
   render() {
     const { movie, onBackClick } = this.props;
