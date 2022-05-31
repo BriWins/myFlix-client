@@ -64,7 +64,7 @@ const handleSubmit = (e) => {
         .then(response =>{
             const data = response.data;
             console.log(data);
-            alert("Registration successful, please login!");
+            alert("Registration successful!");
             window.open("/","_self");
         })
         .catch(response => {
@@ -81,40 +81,40 @@ const handleSubmit = (e) => {
                     <h3>Sign Up</h3>
                     <p></p>
                 <Form.Group controlId="formUsername">
-                <Form.Label>Username:</Form.Label>
-                <Form.Control type="text" placeholder="Enter username" value={username} 
-                onChange={e => setUsername(e.target.value)} />
+                    <Form.Label>Username:</Form.Label>
+                    <Form.Control type="text" placeholder="Enter username" value={username} 
+                    onChange={e => setUsername(e.target.value)} />
                     {values.usernameErr && <p>{values.usernameErr}</p>}
                 </Form.Group>
   
                 <Form.Group controlId="formPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Enter password" value={password} 
-                onChange={e => setPassword(e.target.value)} />
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" placeholder="Enter password" value={password} 
+                    onChange={e => setPassword(e.target.value)} />
                     {values.passwordErr && <p>{values.passwordErr}</p>}
                 </Form.Group>
 
                 <Form.Group controlId="formEmail">
-                <Form.Label>Email Address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email address" value={email} 
-                onChange={e => setEmail(e.target.value)} />
+                    <Form.Label>Email Address</Form.Label>
+                    <Form.Control type="email" placeholder="Enter email address" value={email} 
+                    onChange={e => setEmail(e.target.value)} />
                     {values.emailErr && <p>{values.emailErr}</p>}
                 </Form.Group>
 
                 <Form.Group controlId="formBirthdate">
-                <Form.Label>Date of Birth</Form.Label>
-                <Form.Control type="birthdate" placeholder="Date of Birth is optional" value={birthdate} 
-                onChange={e => setBirthdate(e.target.value)} />
+                    <Form.Label>Date of Birth</Form.Label>
+                    <Form.Control type="birthdate" placeholder="Date of Birth is optional" value={birthdate} 
+                    onChange={e => setBirthdate(e.target.value)} />
                     {values.birthdateErr && <p>{values.birthdateErr}</p>}
                 </Form.Group>
 
-        <Button variant="primary" type="submit" onClick={handleSubmit}>Submit</Button>
-          <p></p>
-          <p>Already Registered? <Link to={"/"}> Sign In</Link> here!</p>
+            <Button variant="primary" type="submit" onClick={handleSubmit}>Submit</Button>
+                <p></p>
+                <p>Already Registered? <Link to={"/"}> Sign In</Link> here!</p>
                 </Form>
             </Col>
         </Row>
-        )}
+)}
 
   RegistrationView.PropTypes = {
         register: PropTypes.shape({
