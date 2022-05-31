@@ -22,12 +22,12 @@ const isAuth = () => {
     return (
         <Navbar className="main-nav" sticky="top" bg="dark" expand="lg" variant="dard">
             <Container>
-                <Navbar.Brand className="navbar-logo" href="/">myFlixCinema</Navbar.Brand>
+                <Navbar.Brand className="navbar-logo" href="/">Flix It Up!</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-nabar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="m1-auto">
                         { isAuth() && (
-                            <Nav.Link href={"/users/${user}"}>{user}</Nav.Link> )}
+                            <Nav.Link href={`/users/${user}`}>{user}</Nav.Link> )}
                             { isAuth() && (
                                 <Button variant="link" onClick={() =>
                                 { this.onLoggedOut() }}>Logout</Button> )}
@@ -40,7 +40,6 @@ const isAuth = () => {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
-);
-
+    );
 }
                                 
