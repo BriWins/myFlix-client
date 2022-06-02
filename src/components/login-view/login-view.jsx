@@ -9,7 +9,7 @@ export function LoginView(props) {
 
   const handleSubmit = (e) => {
       e.preventDefault();
-      axios.post("https://stark-oasis-54313.herokuapp.com/login?Username=${username}&Password=${password}")
+      axios.post("https://glacial-shore-06302.herokuapp.com/login?Username=${username}&Password=${password}")
       .then(response => {
         const data = response.data;
         props.onLoggedIn(data);

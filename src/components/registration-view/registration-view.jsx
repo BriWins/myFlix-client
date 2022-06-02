@@ -55,7 +55,7 @@ const handleSubmit = (e) => {
         const isReq = validate();
         if(isReq) {
         /* Send request to the server for authentication */
-        axios.post("https://stark-oasis-54313.herokuapp.com/users/register", {
+        axios.post("https://glacial-shore-06302.herokuapp.com/users/register", {
             Username: username,
             Password: password,
             Email: email,
