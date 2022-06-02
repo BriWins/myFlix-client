@@ -3767,7 +3767,7 @@ class MainView extends _reactDefault.default.Component {
         }
     }
     getMovies(token) {
-        _axiosDefault.default.get("https://glacial-shore-06302.herokuapp.com/movies", {
+        _axiosDefault.default.get(`https://glacial-shore-06302.herokuapp.com/movies`, {
             headers: {
                 Authorization: "Bearer ${token}"
             }
