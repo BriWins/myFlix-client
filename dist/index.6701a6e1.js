@@ -44386,6 +44386,7 @@ function RegistrationView(props) {
                                 value: username,
                                 onChange: (e)=>setUsername(e.target.value)
                                 ,
+                                "aria-describedby": "usernameHelpBlock",
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
                                     lineNumber: 84
@@ -44395,10 +44396,19 @@ function RegistrationView(props) {
                             usernameErr && /*#__PURE__*/ _jsxRuntime.jsx("p", {
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                    lineNumber: 90
+                                    lineNumber: 91
                                 },
                                 __self: this,
                                 children: usernameErr
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Text, {
+                                className: "text-muted",
+                                __source: {
+                                    fileName: "src/components/registration-view/registration-view.jsx",
+                                    lineNumber: 92
+                                },
+                                __self: this,
+                                children: "Username must have at least six characters"
                             })
                         ]
                     }),
@@ -44406,17 +44416,17 @@ function RegistrationView(props) {
                         controlId: "formPassword",
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 93
+                            lineNumber: 97
                         },
                         __self: this,
                         children: [
                             /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Label, {
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                    lineNumber: 94
+                                    lineNumber: 98
                                 },
                                 __self: this,
-                                children: "Password"
+                                children: "Password:"
                             }),
                             /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Control, {
                                 type: "password",
@@ -44424,19 +44434,29 @@ function RegistrationView(props) {
                                 value: password,
                                 onChange: (e)=>setPassword(e.target.value)
                                 ,
+                                "aria-describedby": "passwordHelpBlock",
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                    lineNumber: 95
+                                    lineNumber: 99
                                 },
                                 __self: this
                             }),
                             passwordErr && /*#__PURE__*/ _jsxRuntime.jsx("p", {
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                    lineNumber: 101
+                                    lineNumber: 106
                                 },
                                 __self: this,
                                 children: passwordErr
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Text, {
+                                className: "text-muted",
+                                __source: {
+                                    fileName: "src/components/registration-view/registration-view.jsx",
+                                    lineNumber: 107
+                                },
+                                __self: this,
+                                children: "Password must be at least eight characters"
                             })
                         ]
                     }),
@@ -44444,17 +44464,17 @@ function RegistrationView(props) {
                         controlId: "formEmail",
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 104
+                            lineNumber: 112
                         },
                         __self: this,
                         children: [
                             /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Label, {
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                    lineNumber: 105
+                                    lineNumber: 113
                                 },
                                 __self: this,
-                                children: "Email Address"
+                                children: "Email Address:"
                             }),
                             /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Control, {
                                 type: "email",
@@ -44462,19 +44482,29 @@ function RegistrationView(props) {
                                 value: email,
                                 onChange: (e)=>setEmail(e.target.value)
                                 ,
+                                "aria-describedby": "emailHelpBlock",
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                    lineNumber: 106
+                                    lineNumber: 114
                                 },
                                 __self: this
                             }),
                             emailErr && /*#__PURE__*/ _jsxRuntime.jsx("p", {
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                    lineNumber: 112
+                                    lineNumber: 121
                                 },
                                 __self: this,
                                 children: emailErr
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Text, {
+                                className: "text-muted",
+                                __source: {
+                                    fileName: "src/components/registration-view/registration-view.jsx",
+                                    lineNumber: 122
+                                },
+                                __self: this,
+                                children: "We will never share your email with anyone else."
                             })
                         ]
                     }),
@@ -44482,17 +44512,17 @@ function RegistrationView(props) {
                         controlId: "formBirthdate",
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 115
+                            lineNumber: 127
                         },
                         __self: this,
                         children: [
                             /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Label, {
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                    lineNumber: 116
+                                    lineNumber: 128
                                 },
                                 __self: this,
-                                children: "Date of Birth"
+                                children: "Date of Birth:"
                             }),
                             /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Control, {
                                 type: "birthdate",
@@ -44500,16 +44530,17 @@ function RegistrationView(props) {
                                 value: birthdate,
                                 onChange: (e)=>setBirthdate(e.target.value)
                                 ,
+                                "aria-describedby": "birthdateHelpBlock",
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                    lineNumber: 117
+                                    lineNumber: 129
                                 },
                                 __self: this
                             }),
                             birthdateErr && /*#__PURE__*/ _jsxRuntime.jsx("p", {
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                    lineNumber: 123
+                                    lineNumber: 136
                                 },
                                 __self: this,
                                 children: birthdateErr
@@ -44522,7 +44553,7 @@ function RegistrationView(props) {
                         onClick: handleSubmit,
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 126
+                            lineNumber: 139
                         },
                         __self: this,
                         children: "Submit"
@@ -44530,14 +44561,14 @@ function RegistrationView(props) {
                     /*#__PURE__*/ _jsxRuntime.jsx("p", {
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 129
+                            lineNumber: 142
                         },
                         __self: this
                     }),
                     /*#__PURE__*/ _jsxRuntime.jsxs("p", {
                         __source: {
                             fileName: "src/components/registration-view/registration-view.jsx",
-                            lineNumber: 130
+                            lineNumber: 143
                         },
                         __self: this,
                         children: [
@@ -44546,7 +44577,7 @@ function RegistrationView(props) {
                                 to: "/",
                                 __source: {
                                     fileName: "src/components/registration-view/registration-view.jsx",
-                                    lineNumber: 131
+                                    lineNumber: 144
                                 },
                                 __self: this,
                                 children: " Sign In"

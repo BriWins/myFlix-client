@@ -86,39 +86,52 @@ export function RegistrationView(props) {
               placeholder="Enter username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              aria-describedby="usernameHelpBlock"
             />
             {usernameErr && <p>{usernameErr}</p>}
+            <Form.Text  className="text-muted">
+                Username must have at least six characters
+            </Form.Text>
           </Form.Group>
 
           <Form.Group controlId="formPassword">
-            <Form.Label>Password</Form.Label>
+            <Form.Label>Password:</Form.Label>
             <Form.Control
               type="password"
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              aria-describedby="passwordHelpBlock"
             />
             {passwordErr && <p>{passwordErr}</p>}
+            <Form.Text  className="text-muted">
+                Password must be at least eight characters
+            </Form.Text>
           </Form.Group>
 
           <Form.Group controlId="formEmail">
-            <Form.Label>Email Address</Form.Label>
+            <Form.Label>Email Address:</Form.Label>
             <Form.Control
               type="email"
               placeholder="Enter email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              aria-describedby="emailHelpBlock"
             />
             {emailErr && <p>{emailErr}</p>}
+            <Form.Text className="text-muted">
+                We will never share your email with anyone else.
+            </Form.Text>
           </Form.Group>
 
           <Form.Group controlId="formBirthdate">
-            <Form.Label>Date of Birth</Form.Label>
+            <Form.Label>Date of Birth:</Form.Label>
             <Form.Control
               type="birthdate"
               placeholder="Date of Birth is optional"
               value={birthdate}
               onChange={(e) => setBirthdate(e.target.value)}
+              aria-describedby="birthdateHelpBlock"
             />
             {birthdateErr && <p>{birthdateErr}</p>}
           </Form.Group>
