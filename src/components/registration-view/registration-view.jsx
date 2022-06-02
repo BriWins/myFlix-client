@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { Form, Button, Row, Col, Container } from "react-bootstrap/";
+import { Form, Button, Row, Col } from "react-bootstrap/";
+
 
 import "./registration-view.scss";
 
@@ -75,9 +76,9 @@ export function RegistrationView(props) {
 
   return (
     <Row className="mt-5">
-      <Col md={12}>
+      <Col md={5}>
         <Form>
-          <h3>Sign Up</h3>
+          <h3>Welcome! Please sign up</h3>
           <p></p>
           <Form.Group controlId="formUsername">
             <Form.Label>Username:</Form.Label>

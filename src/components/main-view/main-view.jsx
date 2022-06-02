@@ -25,7 +25,7 @@ export class MainView extends React.Component {
     let accessToken = localStorage.getItem("token");
     if (accessToken !== null) {
       this.setState({
-        user: localStorage.getItem("user"),
+        users: localStorage.getItem("users"),
       });
       this.getMovies(accessToken);
     }
@@ -53,12 +53,12 @@ export class MainView extends React.Component {
     });
 
     localStorage.setItem("token", authData.token);
-    localStorage.setItem("user", authData.user.Username);
+    localStorage.setItem("users", authData.user.Username);
     this.getMovies(authData.token);
   }
 
   render() {
-    const { movies, user } = this.state;
+    const { movies, users } = this.state;
     return (
       <Router>
         <Container>
@@ -67,10 +67,10 @@ export class MainView extends React.Component {
               exact
               path="/"
               render={() => {
-                if (!user)
+                if (!users)
                   return (
                     <Col>
-                      <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />
+                      <LoginView onLoggedIn={(users) => this.onLoggedIn(users)} />
                     </Col>
                   );
                 if (movies.length === 0) return <div className="main-view" />;
@@ -85,7 +85,7 @@ export class MainView extends React.Component {
             <Route
               path="/register"
               render={() => {
-                if (user) return <Redirect to="/" />;
+                if (users) return <Redirect to="/" />;
                 return (
                   <Col>
                     <RegistrationView />
@@ -97,9 +97,9 @@ export class MainView extends React.Component {
             <Route
               path="/movies/:movieId"
               render={({ match }) => {
-                if (user) return;
+                if (users) return;
                 <Col>
-                  <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />
+                  <LoginView onLoggedIn={(users) => this.onLoggedIn(users)} />
                 </Col>;
                 if (movies.length === 0) return <div className="main-view" />;
                 return (
@@ -117,9 +117,9 @@ export class MainView extends React.Component {
               exact
               path="/directors/:names"
               render={({ match }) => {
-                if (user) return;
+                if (users) return;
                 <Col>
-                  <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />
+                  <LoginView onLoggedIn={(users) => this.onLoggedIn(users)} />
                 </Col>;
                 if (movies.length === 0) return <div className="main-view" />;
                 return (
@@ -141,9 +141,9 @@ export class MainView extends React.Component {
               exact
               path="/genres/:genres"
               render={({ match, history }) => {
-                if (user) return;
+                if (users) return;
                 <Col>
-                  <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />
+                  <LoginView onLoggedIn={(users) => this.onLoggedIn(users)} />
                 </Col>;
                 if (movies.length === 0) return <div className="main-view" />;
                 return (
@@ -162,14 +162,14 @@ export class MainView extends React.Component {
 
             <Route
               exact
-              path={`/users/${user}`}
+              path={`/users/${users}`}
               render={({ match, history }) => {
-                if (!user) return <Redirect to="/" />;
+                if (!users) return <Redirect to="/" />;
                 return (
                   <Col>
                     <ProfileView
                       movies={movies}
-                      user={user}
+                      users={users}
                       onBackClick={() => history.goBack()}
                     />
                   </Col>
