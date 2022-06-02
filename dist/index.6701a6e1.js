@@ -7175,8 +7175,8 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _s = $RefreshSig$();
 function LoginView(props) {
     _s();
-    const [username, setUsername] = _react.useState('');
-    const [password, setPassword] = _react.useState('');
+    const [username, setUsername] = _react.useState("");
+    const [password, setPassword] = _react.useState("");
     const handleSubmit = (e)=>{
         e.preventDefault();
         _axiosDefault.default.post(`https://glacial-shore-06302.herokuapp.com/login?Username=${username}&Password=${password}`).then((response)=>{
@@ -7194,7 +7194,7 @@ function LoginView(props) {
         __self: this,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsxs(_.Form.Group, {
-                controlId: "formUsername",
+                className: "mb-3",
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
                     lineNumber: 24
@@ -7224,7 +7224,7 @@ function LoginView(props) {
                 ]
             }),
             /*#__PURE__*/ _jsxRuntime.jsxs(_.Form.Group, {
-                controlId: "formPassword",
+                className: "mb-3",
                 __source: {
                     fileName: "src/components/login-view/login-view.jsx",
                     lineNumber: 28
@@ -7284,7 +7284,7 @@ function LoginView(props) {
         ]
     }));
 }
-_s(LoginView, "9FY2cPL9VBDmuhjwpF2ik6flsHs=");
+_s(LoginView, "lLPiMBLCwTVrGnt2k2TCjpjjkQI=");
 _c = LoginView;
 var _c;
 $RefreshReg$(_c, "LoginView");

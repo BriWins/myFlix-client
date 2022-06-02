@@ -4,8 +4,8 @@ import {Form,Button,Card} from "react-bootstrap/";
 import axios from "axios";
 
 export function LoginView(props) {
-  const [ username, setUsername ] = useState('');
-  const [ password, setPassword ] = useState('');
+  const [ username, setUsername ] = useState("");
+  const [ password, setPassword ] = useState("");
 
   const handleSubmit = (e) => {
       e.preventDefault();
@@ -21,11 +21,11 @@ export function LoginView(props) {
 
 return (
       <Form>
-        <Form.Group controlId="formUsername">
+        <Form.Group className="mb-3">
             <Form.Label>Username:</Form.Label>
             <Form.Control type="text" placeholder="Enter username" value={username} onChange={e => setUsername(e.target.value)} />
         </Form.Group>
-          <Form.Group controlId="formPassword">
+          <Form.Group className="mb-3">
             <Form.Label>Password:</Form.Label>
             <Form.Control type="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.target.value)}/>
         </Form.Group>
