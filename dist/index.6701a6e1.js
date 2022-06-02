@@ -3767,7 +3767,7 @@ class MainView extends _reactDefault.default.Component {
         }
     }
     getMovies(token) {
-        _axiosDefault.default.get("https://stark-oasis-54313.herokuapp.com/movies", {
+        _axiosDefault.default.get("https://glacial-shore-06302.herokuapp.com/movies", {
             headers: {
                 Authorization: 'Bearer ${token}'
             }
@@ -7153,7 +7153,7 @@ function LoginView(props) {
     const [password, setPassword] = _react.useState('');
     const handleSubmit = (e)=>{
         e.preventDefault();
-        _axiosDefault.default.post("https://stark-oasis-54313.herokuapp.com/login?Username=${username}&Password=${password}").then((response)=>{
+        _axiosDefault.default.post("https://glacial-shore-06302.herokuapp.com/login?Username=${username}&Password=${password}").then((response)=>{
             const data = response.data;
             props.onLoggedIn(data);
         }).catch((e1)=>{
@@ -44287,7 +44287,7 @@ function RegistrationView(props) {
     const handleSubmit = (e)=>{
         e.preventDefault();
         const isReq = validate();
-        if (isReq) /* Send request to the server for authentication */ _axiosDefault.default.post("https://stark-oasis-54313.herokuapp.com/users/register", {
+        if (isReq) /* Send request to the server for authentication */ _axiosDefault.default.post("https://glacial-shore-06302.herokuapp.com/users/register", {
             Username: username,
             Password: password,
             Email: email,
