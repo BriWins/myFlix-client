@@ -76,7 +76,7 @@ export class MainView extends React.Component {
                   );
                 return movies.map((m) => (
                   <Col md={3} key={m._id}>
-                    <MovieCard movie={m} />
+                    <MovieCard movies={m} />
                   </Col>
                 ));
               }}
@@ -85,7 +85,7 @@ export class MainView extends React.Component {
             <Route
               path="/register"
               render={() => {
-                if (!users) return <Redirect to="/" />;
+                if (users) return <Redirect to="/" />;
                 return (
                   <Col>
                     <RegistrationView />
@@ -97,14 +97,16 @@ export class MainView extends React.Component {
             <Route
               path="/movies/:movieId"
               render={({ match }) => {
-                if (!users) return;
+                if (!users) return (
                 <Col>
                   <LoginView onLoggedIn={(users) => this.onLoggedIn(users)} />
-                </Col>;
+                </Col>
+                );
                 return (
                   <Col md={8}>
                     <MovieView
-                      movie={movies.find((m) => m._id === match.params.movieId)}
+                      movie={
+                        movies.find((m) => m._id === match.params.movieId)}
                       onBackClick={() => history.goBack()}
                     />
                   </Col>
@@ -116,10 +118,11 @@ export class MainView extends React.Component {
               exact
               path="/directors/:names"
               render={({ match }) => {
-                if (!users) return;
+                if (!users) return(
                 <Col>
                   <LoginView onLoggedIn={(users) => this.onLoggedIn(users)} />
-                </Col>;
+                </Col>
+                );
                 return (
                   <Col md={8}>
                     <DirectorView
@@ -139,10 +142,12 @@ export class MainView extends React.Component {
               exact
               path="/genres/:genres"
               render={({ match, history }) => {
-                if (!users) return;
+                if (!users) 
+                return (
                 <Col>
                   <LoginView onLoggedIn={(users) => this.onLoggedIn(users)} />
-                </Col>;
+                </Col>
+                );
                 return (
                   <Col md={8}>
                     <GenreView

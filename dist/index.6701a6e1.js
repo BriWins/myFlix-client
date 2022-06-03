@@ -3810,7 +3810,7 @@ class MainView extends _reactDefault.default.Component {
                                 return movies.map((m)=>/*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
                                         md: 3,
                                         children: /*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
-                                            movie: m
+                                            movies: m
                                         })
                                     }, m._id)
                                 );
@@ -3824,7 +3824,7 @@ class MainView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
                             path: "/register",
                             render: ()=>{
-                                if (!users) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
+                                if (users) return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Redirect, {
                                     to: "/"
                                 }));
                                 return(/*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
@@ -3841,12 +3841,11 @@ class MainView extends _reactDefault.default.Component {
                         /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
                             path: "/movies/:movieId",
                             render: ({ match  })=>{
-                                if (!users) return;
-                                /*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
+                                if (!users) return(/*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
                                         onLoggedIn: (users1)=>this.onLoggedIn(users1)
                                     })
-                                });
+                                }));
                                 return(/*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
                                     md: 8,
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_movieView.MovieView, {
@@ -3866,12 +3865,11 @@ class MainView extends _reactDefault.default.Component {
                             exact: true,
                             path: "/directors/:names",
                             render: ({ match  })=>{
-                                if (!users) return;
-                                /*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
+                                if (!users) return(/*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
                                         onLoggedIn: (users1)=>this.onLoggedIn(users1)
                                     })
-                                });
+                                }));
                                 return(/*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
                                     md: 8,
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_directorView.DirectorView, {
@@ -3883,7 +3881,7 @@ class MainView extends _reactDefault.default.Component {
                             },
                             __source: {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 115
+                                lineNumber: 117
                             },
                             __self: this
                         }),
@@ -3891,12 +3889,11 @@ class MainView extends _reactDefault.default.Component {
                             exact: true,
                             path: "/genres/:genres",
                             render: ({ match , history  })=>{
-                                if (!users) return;
-                                /*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
+                                if (!users) return(/*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_loginView.LoginView, {
                                         onLoggedIn: (users1)=>this.onLoggedIn(users1)
                                     })
-                                });
+                                }));
                                 return(/*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
                                     md: 8,
                                     children: /*#__PURE__*/ _jsxRuntime.jsx(_genreView.GenreView, {
@@ -3908,7 +3905,7 @@ class MainView extends _reactDefault.default.Component {
                             },
                             __source: {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 138
+                                lineNumber: 141
                             },
                             __self: this
                         }),
@@ -3929,7 +3926,7 @@ class MainView extends _reactDefault.default.Component {
                             },
                             __source: {
                                 fileName: "src/components/main-view/main-view.jsx",
-                                lineNumber: 160
+                                lineNumber: 165
                             },
                             __self: this
                         })
