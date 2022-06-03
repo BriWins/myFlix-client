@@ -18,6 +18,7 @@ export class MainView extends React.Component {
     this.state = {
       movies: [],
       selectedMovie: null,
+      users: null,
     };
   }
 
@@ -49,11 +50,11 @@ export class MainView extends React.Component {
   onLoggedIn(authData) {
     console.log(authData);
     this.setState({
-      user: authData.user.Username,
+      users: authData.users.Username,
     });
 
     localStorage.setItem("token", authData.token);
-    localStorage.setItem("users", authData.user.Username);
+    localStorage.setItem("users", authData.users.Username);
     this.getMovies(authData.token);
   }
 
@@ -73,7 +74,6 @@ export class MainView extends React.Component {
                       <LoginView onLoggedIn={(users) => this.onLoggedIn(users)} />
                     </Col>
                   );
-                if (movies.length === 0) return <div className="main-view" />;
                 return movies.map((m) => (
                   <Col md={3} key={m._id}>
                     <MovieCard movie={m} />
@@ -97,15 +97,14 @@ export class MainView extends React.Component {
             <Route
               path="/movies/:movieId"
               render={({ match }) => {
-                if (users) return;
+                if (!users) return;
                 <Col>
                   <LoginView onLoggedIn={(users) => this.onLoggedIn(users)} />
                 </Col>;
-                if (movies.length === 0) return <div className="main-view" />;
                 return (
                   <Col md={8}>
                     <MovieView
-                      movie={movies.find((m) => m._id === match.params.movieID)}
+                      movie={movies.find((m) => m._id === match.params.movieId)}
                       onBackClick={() => history.goBack()}
                     />
                   </Col>
@@ -117,11 +116,10 @@ export class MainView extends React.Component {
               exact
               path="/directors/:names"
               render={({ match }) => {
-                if (users) return;
+                if (!users) return;
                 <Col>
                   <LoginView onLoggedIn={(users) => this.onLoggedIn(users)} />
                 </Col>;
-                if (movies.length === 0) return <div className="main-view" />;
                 return (
                   <Col md={8}>
                     <DirectorView
@@ -141,11 +139,10 @@ export class MainView extends React.Component {
               exact
               path="/genres/:genres"
               render={({ match, history }) => {
-                if (users) return;
+                if (!users) return;
                 <Col>
                   <LoginView onLoggedIn={(users) => this.onLoggedIn(users)} />
                 </Col>;
-                if (movies.length === 0) return <div className="main-view" />;
                 return (
                   <Col md={8}>
                     <GenreView
