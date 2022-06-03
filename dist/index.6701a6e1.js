@@ -946,20 +946,25 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 var _mainView = require("./components/main-view/main-view");
-var _ = require("react-bootstrap/");
 // Import statement to indicate that you need to bundle `./index.scss`
 var _indexScss = require("./index.scss");
 // Main component (will eventually use all the others)
 class MyFlixApplication extends _reactDefault.default.Component {
     render() {
-        return;
+        return(/*#__PURE__*/ _jsxRuntime.jsx(_mainView.MainView, {
+            __source: {
+                fileName: "src/index.jsx",
+                lineNumber: 12
+            },
+            __self: this
+        }));
     }
 }
 const container = _clientDefault.default.createRoot(document.getElementsByClassName("app-container")[0]);
 container.render(/*#__PURE__*/ _jsxRuntime.jsx(MyFlixApplication, {
     __source: {
         fileName: "src/index.jsx",
-        lineNumber: 21
+        lineNumber: 19
     },
     __self: undefined
 }));
@@ -969,7 +974,7 @@ container.render(/*#__PURE__*/ _jsxRuntime.jsx(MyFlixApplication, {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","./components/main-view/main-view":"2zHas","./index.scss":"jUTZ8","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo","react-dom/client":"jdzvJ","react-bootstrap/":"h2YVd"}],"8xIwr":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","./components/main-view/main-view":"2zHas","./index.scss":"jUTZ8","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo","react-dom/client":"jdzvJ"}],"8xIwr":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-runtime.development.js');
 
