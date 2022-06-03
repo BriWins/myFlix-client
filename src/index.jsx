@@ -10,16 +10,13 @@ import './index.scss';
 // Main component (will eventually use all the others)
 class MyFlixApplication extends React.Component {
   render() {
-    return (
-     <MainView />
-    );
+    return 
+     <MainView/>;
   }
 }
 
 
 const container = ReactDOM.createRoot(document.getElementsByClassName("app-container")[0]);
 container.render(
-  <React.StrictMode>
     <MyFlixApplication />
-  </React.StrictMode>
 );
