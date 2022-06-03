@@ -44570,7 +44570,7 @@ function RegistrationView(props) {
 }
 _s(RegistrationView, "jSTEJOB8RQuaN9kb9hgsw+7HgMQ=");
 _c = RegistrationView;
-RegistrationView.PropTypes = {
+RegistrationView.propTypes = {
     register: _propTypesDefault.default.shape({
         Username: _propTypesDefault.default.string.isRequired,
         Password: _propTypesDefault.default.string.isRequired,
