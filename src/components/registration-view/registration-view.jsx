@@ -6,6 +6,7 @@ import { Form, Button, Row, Col, Card, CardGroup, Container } from "react-bootst
 
 
 import "./registration-view.scss";
+import CardHeader from "react-bootstrap/esm/CardHeader";
 
 export function RegistrationView(props) {
   const [username, setUsername] = useState("");
@@ -76,10 +77,11 @@ export function RegistrationView(props) {
 
   return (
     <Container>
-      <Row className="mt-5">
-        <Col md={5}>
+      <Row>
+        <Col>
           <CardGroup>
             <Card>
+              <Card.Title>Welcome! Please register</Card.Title>
               <Form>
                 {/* <h3>Welcome! Please sign up</h3>
                 <p></p> */}

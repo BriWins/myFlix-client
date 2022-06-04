@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Form,Button,Card} from "react-bootstrap/";
+import {Form,Button,Card, Container, Row} from "react-bootstrap/";
 
 import axios from "axios";
 
@@ -20,7 +20,16 @@ export function LoginView(props) {
     };
 
 return (
-      <Form >
+    <Container>
+      <Row>
+          <Col></Col> 
+          <Col>  
+          <Card> 
+            <Card.Body>
+            <Card.Title></Card.Title>  
+
+      <Form>
+      
         <Form.Group className="mb-3">
             <Form.Label>Username:</Form.Label>
             <Form.Control type="text" placeholder="Enter username" value={username} onChange={e => setUsername(e.target.value)} />
@@ -36,6 +45,12 @@ return (
           Login
           </Button>
       </Form>
+      </Card.Body>
+      </Card>  
+      </Col> 
+      <Col></Col>
+      </Row>
+      </Container>
 
   );
 }
