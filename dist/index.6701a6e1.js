@@ -7165,6 +7165,7 @@ function LoginView(props) {
         });
     };
     return(/*#__PURE__*/ _jsxRuntime.jsx(_.Container, {
+        className: "pt-5",
         __source: {
             fileName: "src/components/login-view/login-view.jsx",
             lineNumber: 23
@@ -7219,7 +7220,6 @@ function LoginView(props) {
                                     __self: this,
                                     children: [
                                         /*#__PURE__*/ _jsxRuntime.jsxs(_.Form.Group, {
-                                            className: "mb-3",
                                             __source: {
                                                 fileName: "src/components/login-view/login-view.jsx",
                                                 lineNumber: 31
@@ -7249,7 +7249,6 @@ function LoginView(props) {
                                             ]
                                         }),
                                         /*#__PURE__*/ _jsxRuntime.jsxs(_.Form.Group, {
-                                            className: "mb-3",
                                             __source: {
                                                 fileName: "src/components/login-view/login-view.jsx",
                                                 lineNumber: 35
@@ -7257,6 +7256,7 @@ function LoginView(props) {
                                             __self: this,
                                             children: [
                                                 /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Label, {
+                                                    className: "pt-2",
                                                     __source: {
                                                         fileName: "src/components/login-view/login-view.jsx",
                                                         lineNumber: 36
@@ -7279,7 +7279,7 @@ function LoginView(props) {
                                             ]
                                         }),
                                         /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Group, {
-                                            className: "mb-3",
+                                            className: "pt-2 pb-2",
                                             __source: {
                                                 fileName: "src/components/login-view/login-view.jsx",
                                                 lineNumber: 39

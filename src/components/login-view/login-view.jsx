@@ -20,23 +20,23 @@ export function LoginView(props) {
     };
 
 return (
-    <Container>
+    <Container className="pt-5">
         <Row>
-          <Col></Col> 
-            <Col>  
-               <Card> 
-                  <Card.Body>
+          <Col></Col>
+            <Col >  
+               <Card > 
+                  <Card.Body >
                     <Card.Title>Please Login</Card.Title>  
                       <Form>
-                      <Form.Group className="mb-3">
+                      <Form.Group>
                           <Form.Label>Username:</Form.Label>
                           <Form.Control type="text" placeholder="Enter username" value={username} onChange={e => setUsername(e.target.value)} />
                       </Form.Group>
-                        <Form.Group className="mb-3">
-                          <Form.Label>Password:</Form.Label>
+                        <Form.Group >
+                          <Form.Label className="pt-2">Password:</Form.Label>
                           <Form.Control type="password" placeholder="Enter password" value={password} onChange={e => setPassword(e.target.value)}/>
                       </Form.Group>
-                      <Form.Group className="mb-3">
+                      <Form.Group className="pt-2 pb-2">
                         <Form.Check type="checkbox" label="Remember me" />
                       </Form.Group>
                         <Button variant="primary" type="submit" onClick={handleSubmit}>
@@ -46,7 +46,7 @@ return (
                   </Card.Body>
                 </Card>  
              </Col> 
-          <Col></Col>
+            <Col></Col>
         </Row>
       </Container>
 
