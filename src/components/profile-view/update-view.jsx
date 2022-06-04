@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
-import { Form, Button, Row, Col, Container } from "react-bootstrap/";
+import { Form, Button, Row, Col, Container, Card, CardGroup, Modal } from "react-bootstrap/";
 
-export function RegistrationView(props) {
+export function ProfileView(props) {
     const [ username, setUsername ] = useState("");
     const [ password, setPassword ] = useState("");
     const [ email, setEmail ] = useState("");
@@ -52,7 +52,7 @@ export function RegistrationView(props) {
         const isReq = validate();
         if (isReq) {
           const token = localStorage.getItem('token');
-          axios.put(`https://stark-oasis-54313.herokuapp.com/users/${user.Username}`, {
+          axios.put(`https://glacial-shore-06302.herokuapp.com/users/${user.Username}`, {
             Username: username,
             Password: password,
             Email: email,

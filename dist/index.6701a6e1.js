@@ -45029,7 +45029,7 @@ function ProfileView(props) {
     const currentUser = localStorage.getItem('user');
     const token = localStorage.getItem('token');
     const getUser = ()=>{
-        _axiosDefault.default.get(`https://stark-oasis-54313.herokuapp.com/users/${currentUser}`, {
+        _axiosDefault.default.get(`https://glacial-shore-06302.herokuapp.com/users/${currentUser}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -45043,7 +45043,7 @@ function ProfileView(props) {
         getUser();
     }, []);
     const handleDelete = ()=>{
-        _axiosDefault.default.delete(`https://stark-oasis-54313.herokuapp.com/users/${currentUser}`, {
+        _axiosDefault.default.delete(`https://glacial-shore-06302.herokuapp.com/users/${currentUser}`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -45267,7 +45267,7 @@ $parcel$ReactRefreshHelpers$7b09.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "RegistrationView", ()=>RegistrationView
+parcelHelpers.export(exports, "ProfileView", ()=>ProfileView
 );
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
@@ -45278,7 +45278,7 @@ var _propTypes = require("prop-types");
 var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _ = require("react-bootstrap/");
 var _s = $RefreshSig$();
-function RegistrationView(props) {
+function ProfileView(props) {
     _s();
     const [username, setUsername] = _react.useState("");
     const [password, setPassword] = _react.useState("");
@@ -45318,7 +45318,7 @@ function RegistrationView(props) {
         const isReq = validate();
         if (isReq) {
             const token = localStorage.getItem('token');
-            _axiosDefault.default.put(`https://stark-oasis-54313.herokuapp.com/users/${user.Username}`, {
+            _axiosDefault.default.put(`https://glacial-shore-06302.herokuapp.com/users/${user.Username}`, {
                 Username: username,
                 Password: password,
                 Email: email,
@@ -45557,10 +45557,10 @@ function RegistrationView(props) {
         ]
     }));
 }
-_s(RegistrationView, "m9BxuTpYgKv08WiJ/xFBuxyyxG0=");
-_c = RegistrationView;
+_s(ProfileView, "m9BxuTpYgKv08WiJ/xFBuxyyxG0=");
+_c = ProfileView;
 var _c;
-$RefreshReg$(_c, "RegistrationView");
+$RefreshReg$(_c, "ProfileView");
 
   $parcel$ReactRefreshHelpers$7b09.postlude(module);
 } finally {
