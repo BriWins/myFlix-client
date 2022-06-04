@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import { Form, Button, Row, Col } from "react-bootstrap/";
+import { Form, Button, Row, Col, Card, CardGroup, Container } from "react-bootstrap/";
 
 
 import "./registration-view.scss";
@@ -75,78 +75,89 @@ export function RegistrationView(props) {
   };
 
   return (
-    <Row className="mt-5">
-      <Col md={5}>
-        <Form>
-          <h3>Welcome! Please sign up</h3>
-          <p></p>
-          <Form.Group controlId="formUsername">
-            <Form.Label>Username:</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              aria-describedby="usernameHelpBlock"
-            />
-            {usernameErr && <p>{usernameErr}</p>}
-            <Form.Text  className="text-muted">
-                Username must have at least six characters
-            </Form.Text>
-          </Form.Group>
+    <Container>
+      <Row className="mt-5">
+        <Col md={5}>
+          <CardGroup>
+            <Card>
+              <Form>
+                {/* <h3>Welcome! Please sign up</h3>
+                <p></p> */}
+                <Form.Group controlId="formUsername">
+                  <Form.Label>Username:</Form.Label>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter a username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    required
+                    minLength="6"
+                    aria-describedby="usernameHelpBlock"
+                  />
+                  {usernameErr && <p>{usernameErr}</p>}
+                  <Form.Text  className="text-muted">
+                      Username must have at least six characters
+                  </Form.Text>
+                </Form.Group>
 
-          <Form.Group controlId="formPassword">
-            <Form.Label>Password:</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Enter password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              aria-describedby="passwordHelpBlock"
-            />
-            {passwordErr && <p>{passwordErr}</p>}
-            <Form.Text  className="text-muted">
-                Password must be at least eight characters
-            </Form.Text>
-          </Form.Group>
+                <Form.Group controlId="formPassword">
+                  <Form.Label>Password:</Form.Label>
+                  <Form.Control
+                    type="password"
+                    placeholder="Create a password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                    minLength="8"
+                    aria-describedby="passwordHelpBlock"
+                  />
+                  {passwordErr && <p>{passwordErr}</p>}
+                  <Form.Text  className="text-muted">
+                      Password must be at least eight characters
+                  </Form.Text>
+                </Form.Group>
 
-          <Form.Group controlId="formEmail">
-            <Form.Label>Email Address:</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="Enter email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              aria-describedby="emailHelpBlock"
-            />
-            {emailErr && <p>{emailErr}</p>}
-            <Form.Text className="text-muted">
-                We will never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
+                <Form.Group controlId="formEmail">
+                  <Form.Label>Email Address:</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="Enter an email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    aria-describedby="emailHelpBlock"
+                  />
+                  {emailErr && <p>{emailErr}</p>}
+                  <Form.Text className="text-muted">
+                      We will never share your email with anyone else
+                  </Form.Text>
+                </Form.Group>
 
-          <Form.Group controlId="formBirthdate">
-            <Form.Label>Date of Birth:</Form.Label>
-            <Form.Control
-              type="birthdate"
-              placeholder="Date of Birth is optional"
-              value={birthdate}
-              onChange={(e) => setBirthdate(e.target.value)}
-              aria-describedby="birthdateHelpBlock"
-            />
-            {birthdateErr && <p>{birthdateErr}</p>}
-          </Form.Group>
+                <Form.Group controlId="formBirthdate">
+                  <Form.Label>Date of Birth:</Form.Label>
+                  <Form.Control
+                    type="birthdate"
+                    placeholder="Date of Birth is optional"
+                    value={birthdate}
+                    onChange={(e) => setBirthdate(e.target.value)}
+                    aria-describedby="birthdateHelpBlock"
+                  />
+                  {birthdateErr && <p>{birthdateErr}</p>}
+                </Form.Group>
 
-          <Button variant="primary" type="submit" onClick={handleSubmit}>
-            Submit
-          </Button>
-          <p></p>
-          <p>
-            Already Registered? <Link to={"/"}> Sign In</Link> here!
-          </p>
-        </Form>
-      </Col>
-    </Row>
+                <Button variant="primary" type="submit" onClick={handleSubmit}>
+                  Submit
+                </Button>
+                <p></p>
+                <p>
+                  Already Registered? <Link to={"/"}> Sign In</Link> here!
+                </p>
+              </Form>
+            </Card>
+          </CardGroup>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
