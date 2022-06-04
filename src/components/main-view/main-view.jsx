@@ -69,20 +69,7 @@ export class MainView extends React.Component {
           <MenuBar users={users} />
         <Row className="main-view justify-content-md-center">
 
-          <Route exact
-           path="/" render={() => {
-            if (!users) 
-            return 
-            <Col>
-              <LoginView onLoggedIn={users => this.onLoggedIn(users)} />
-            </Col>
-            return movies.map(m => (
-              <Col md={3} key={m._id}>
-                <MovieCard movies={m} />
-              </Col>
-            ))
-          }} 
-          />
+         
             <Route
               exact
               path="/"

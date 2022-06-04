@@ -8,7 +8,7 @@ import {FavoriteView} from "./favorite-view";
 import { Button, Form, Card, Nav } from "react-bootstrap/";
 
 export function ProfileView(props) {
-    const [ user, setUser ] = useState(props.user);
+    const [ users, setUser ] = useState(props.user);
     const [ movies, setMovies ] = useState(props.movies);
     const [ favoriteMovies, setFavoriteMovies ] = useState([]);
     const currentUser = localStorage.getItem('user');
@@ -33,7 +33,7 @@ export function ProfileView(props) {
               headers: { Authorization: `Bearer ${token}`}
             })
             .then(() => {
-              alert(`The account ${user.Username} was successfully deleted.`)
+              alert(`The account ${users.Username} was successfully deleted.`)
               localStorage.clear();
               window.open('/register', '_self');
             }).
