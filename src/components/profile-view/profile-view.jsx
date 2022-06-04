@@ -74,7 +74,7 @@ return (
           token={token}/>
         </Row>
         
-        <UpdateView user={user}/>
+        <UpdateView users={users}/>
         <Button className="d-block mt-5" variant="warning" onClick={handleDelete}>Delete profile</Button>
     </Container>
   )}

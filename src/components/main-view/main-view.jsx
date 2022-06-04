@@ -9,8 +9,9 @@ import { DirectorView } from "../director-view/director-view";
 import { GenreView } from "../genre-view/genre-view";
 import { ProfileView } from "../profile-view/profile-view";
 import { UserUpdate } from "../profile-view/update-view";
+import { MenuBar } from "../navbar/navbar";
 
-import { Row, Col, Container } from "react-bootstrap/";
+import { Row, Col, Container, Nav, Navbar } from "react-bootstrap/";
 
 export class MainView extends React.Component {
   constructor() {
@@ -63,7 +64,25 @@ export class MainView extends React.Component {
     return (
       <Router>
         <Container>
-          <Row className="main-view justify-content-md-center">
+          
+
+          <MenuBar users={users} />
+        <Row className="main-view justify-content-md-center">
+
+          <Route exact
+           path="/" render={() => {
+            if (!users) 
+            return 
+            <Col>
+              <LoginView onLoggedIn={users => this.onLoggedIn(users)} />
+            </Col>
+            return movies.map(m => (
+              <Col md={3} key={m._id}>
+                <MovieCard movies={m} />
+              </Col>
+            ))
+          }} 
+          />
             <Route
               exact
               path="/"
