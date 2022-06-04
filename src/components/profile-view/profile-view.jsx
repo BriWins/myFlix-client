@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./profile-view.scss";
@@ -6,7 +6,7 @@ import "./profile-view.scss";
 //import {FavoriteView} from "./favorite-view";
 import { MovieCard } from "../movie-card/movie-card";
 
-import { Button, Form, Card, Nav } from "react-bootstrap/";
+import { Button, Form, Card, Nav, Container, Modal, Row } from "react-bootstrap/";
 
 export function ProfileView({ movies }) {
   const [username, setUsername] = useState('');
@@ -86,8 +86,8 @@ export function ProfileView({ movies }) {
           return (
             <Row className="justify-content-md-center">
     
-              {favoriteMovies.length === 0 ? (<h5>Add some movies to your list</h5>) : (
-                favoriteMovies.map((movieId, i) => (
+              {favoriteMoviesList.length === 0 ? (<h5>Add some movies to your list</h5>) : (
+                favoriteMoviesList.map((movieId, i) => (
                   <Col md={6} lg={4}>
                     <MovieCard key={`${i}-${movieId}`} movies={movies.find(m => m._id == movieId)} />
                   </Col>

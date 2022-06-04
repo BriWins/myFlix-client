@@ -45031,7 +45031,7 @@ function ProfileView({ movies  }) {
     const [birthdate, setBirthdate] = _react.useState('');
     const [favoriteMovies, setFavoriteMovies] = _react.useState([]);
     const [show, setShow] = _react.useState(false);
-    useEffect(()=>{
+    _react.useEffect(()=>{
         getUser();
     }, []);
     const getUser = ()=>{
@@ -45088,21 +45088,21 @@ function ProfileView({ movies  }) {
     };
     const favoriteMoviesList = ()=>{
         console.log(movies);
-        if (movies.length + 0) return(/*#__PURE__*/ _jsxRuntime.jsx(Row, {
+        if (movies.length + 0) return(/*#__PURE__*/ _jsxRuntime.jsx(_.Row, {
             className: "justify-content-md-center",
             __source: {
                 fileName: "src/components/profile-view/profile-view.jsx",
                 lineNumber: 87
             },
             __self: this,
-            children: favoriteMovies.length === 0 ? /*#__PURE__*/ _jsxRuntime.jsx("h5", {
+            children: favoriteMoviesList.length === 0 ? /*#__PURE__*/ _jsxRuntime.jsx("h5", {
                 __source: {
                     fileName: "src/components/profile-view/profile-view.jsx",
                     lineNumber: 89
                 },
                 __self: this,
                 children: "Add some movies to your list"
-            }) : favoriteMovies.map((movieId, i)=>/*#__PURE__*/ _jsxRuntime.jsx(Col, {
+            }) : favoriteMoviesList.map((movieId, i)=>/*#__PURE__*/ _jsxRuntime.jsx(Col, {
                     md: 6,
                     lg: 4,
                     __source: {
@@ -45131,7 +45131,7 @@ function ProfileView({ movies  }) {
     // Function that contains the modal to delete a users account 
     const cancelUserModal = ()=>{
         return(/*#__PURE__*/ _jsxRuntime.jsx(_jsxRuntime.Fragment, {
-            children: /*#__PURE__*/ _jsxRuntime.jsxs(Modal, {
+            children: /*#__PURE__*/ _jsxRuntime.jsxs(_.Modal, {
                 style: {
                     background: "transparent"
                 },
@@ -45143,14 +45143,14 @@ function ProfileView({ movies  }) {
                 },
                 __self: this,
                 children: [
-                    /*#__PURE__*/ _jsxRuntime.jsx(Modal.Header, {
+                    /*#__PURE__*/ _jsxRuntime.jsx(_.Modal.Header, {
                         closeButton: true,
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
                             lineNumber: 112
                         },
                         __self: this,
-                        children: /*#__PURE__*/ _jsxRuntime.jsx(Modal.Title, {
+                        children: /*#__PURE__*/ _jsxRuntime.jsx(_.Modal.Title, {
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
                                 lineNumber: 113
@@ -45159,7 +45159,7 @@ function ProfileView({ movies  }) {
                             children: "Delete your Account"
                         })
                     }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(Modal.Body, {
+                    /*#__PURE__*/ _jsxRuntime.jsx(_.Modal.Body, {
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
                             lineNumber: 115
@@ -45167,7 +45167,7 @@ function ProfileView({ movies  }) {
                         __self: this,
                         children: "Are you sure you want to delete your account?"
                     }),
-                    /*#__PURE__*/ _jsxRuntime.jsxs(Modal.Footer, {
+                    /*#__PURE__*/ _jsxRuntime.jsxs(_.Modal.Footer, {
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
                             lineNumber: 116
@@ -45201,7 +45201,7 @@ function ProfileView({ movies  }) {
         }));
     };
     return(/*#__PURE__*/ _jsxRuntime.jsx(_jsxRuntime.Fragment, {
-        children: /*#__PURE__*/ _jsxRuntime.jsxs(Container, {
+        children: /*#__PURE__*/ _jsxRuntime.jsxs(_.Container, {
             __source: {
                 fileName: "src/components/profile-view/profile-view.jsx",
                 lineNumber: 131

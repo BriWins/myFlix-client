@@ -35,7 +35,7 @@ export function FavoriteView(props) {
               <Col xs={10} sm={8} md={6} lg={4} >
                 <Card id="movie-card">
                   <Link to={`/movies/${movie._id}`}>
-                    <Card.Img variant="top" src={movie.ImagePath} />
+                    <Card.Img variant="top" src={movie.ImgPath} />
                   </Link>
                   <Card.Body>
                       <Card.Title>{movie.Title}</Card.Title>
