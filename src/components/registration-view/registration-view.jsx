@@ -81,10 +81,9 @@ export function RegistrationView(props) {
         <Col>
           <CardGroup>
             <Card>
+              <Card.Body>
               <Card.Title>Welcome! Please register</Card.Title>
               <Form>
-                {/* <h3>Welcome! Please sign up</h3>
-                <p></p> */}
                 <Form.Group controlId="formUsername">
                   <Form.Label>Username:</Form.Label>
                   <Form.Control
@@ -155,6 +154,7 @@ export function RegistrationView(props) {
                   Already Registered? <Link to={"/"}> Sign In</Link> here!
                 </p>
               </Form>
+              </Card.Body>
             </Card>
           </CardGroup>
         </Col>
