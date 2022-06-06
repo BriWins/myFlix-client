@@ -45725,7 +45725,7 @@ var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _ = require("react-bootstrap/");
-function MenuBar({ user  }) {
+function MenuBar({ users  }) {
     const onLoggedOut = ()=>{
         localStorage.clear();
         window.open("/", "_self");
@@ -45740,7 +45740,7 @@ function MenuBar({ user  }) {
         sticky: "top",
         bg: "dark",
         expand: "lg",
-        variant: "dard",
+        variant: "dark",
         __source: {
             fileName: "src/components/navbar/navbar.jsx",
             lineNumber: 23
@@ -45779,21 +45779,21 @@ function MenuBar({ user  }) {
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsxs(_.Nav, {
-                        className: "m1-auto",
+                        className: "ms-auto",
                         __source: {
                             fileName: "src/components/navbar/navbar.jsx",
-                            lineNumber: 28
+                            lineNumber: 29
                         },
                         __self: this,
                         children: [
                             isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_.Nav.Link, {
-                                href: `/users/${user}`,
+                                href: `/users/${users}`,
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 30
+                                    lineNumber: 31
                                 },
                                 __self: this,
-                                children: user
+                                children: users
                             }),
                             isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_.Button, {
                                 variant: "link",
@@ -45802,7 +45802,7 @@ function MenuBar({ user  }) {
                                 },
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 32
+                                    lineNumber: 33
                                 },
                                 __self: this,
                                 children: "Logout"
@@ -45811,7 +45811,7 @@ function MenuBar({ user  }) {
                                 href: "/",
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 35
+                                    lineNumber: 36
                                 },
                                 __self: this,
                                 children: "Sign-in"
@@ -45820,7 +45820,7 @@ function MenuBar({ user  }) {
                                 href: "/register",
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 37
+                                    lineNumber: 38
                                 },
                                 __self: this,
                                 children: "Sign-up"
@@ -45841,7 +45841,7 @@ $RefreshReg$(_c, "MenuBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-bootstrap/":"h2YVd","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo"}],"jUTZ8":[function() {},{}],"jdzvJ":[function(require,module,exports) {
+},{"react":"6TuXu","react-bootstrap/":"h2YVd","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo","react/jsx-runtime":"8xIwr"}],"jUTZ8":[function() {},{}],"jdzvJ":[function(require,module,exports) {
 'use strict';
 var m = require('react-dom');
 var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
