@@ -45782,7 +45782,7 @@ function MenuBar({ users  }) {
                         className: "ms-auto",
                         __source: {
                             fileName: "src/components/navbar/navbar.jsx",
-                            lineNumber: 29
+                            lineNumber: 28
                         },
                         __self: this,
                         children: [
@@ -45790,7 +45790,7 @@ function MenuBar({ users  }) {
                                 href: `/users/${users}`,
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 31
+                                    lineNumber: 30
                                 },
                                 __self: this,
                                 children: users
@@ -45802,7 +45802,7 @@ function MenuBar({ users  }) {
                                 },
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 33
+                                    lineNumber: 32
                                 },
                                 __self: this,
                                 children: "Logout"
@@ -45811,7 +45811,7 @@ function MenuBar({ users  }) {
                                 href: "/",
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 36
+                                    lineNumber: 35
                                 },
                                 __self: this,
                                 children: "Sign-in"
@@ -45820,7 +45820,7 @@ function MenuBar({ users  }) {
                                 href: "/register",
                                 __source: {
                                     fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 38
+                                    lineNumber: 37
                                 },
                                 __self: this,
                                 children: "Sign-up"

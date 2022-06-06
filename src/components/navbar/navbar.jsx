@@ -25,7 +25,6 @@ const isAuth = () => {
                 <Navbar.Brand className="navbar-logo" href="/">Flix It Up!</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-nabar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav">
-            
                     <Nav className="ms-auto">
                         { isAuth() && (
                             <Nav.Link href={`/users/${users}`}>{users}</Nav.Link> )}
@@ -38,7 +37,6 @@ const isAuth = () => {
                                         <Nav.Link href="/register">Sign-up</Nav.Link>
                         )}   
                     </Nav>
-                   
                 </Navbar.Collapse>
             </Container>
         </Navbar>
