@@ -45018,7 +45018,7 @@ var _reactRouterDom = require("react-router-dom");
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _profileViewScss = require("./profile-view.scss");
-//import {UpdateView} from "./update-view";
+var _userInfo = require("./user-info");
 //import {FavoriteView} from "./favorite-view";
 var _movieCard = require("../movie-card/movie-card");
 var _ = require("react-bootstrap/");
@@ -45092,13 +45092,13 @@ function ProfileView({ movies  }) {
             className: "justify-content-md-center",
             __source: {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 87
+                lineNumber: 89
             },
             __self: this,
             children: favoriteMoviesList.length === 0 ? /*#__PURE__*/ _jsxRuntime.jsx("h5", {
                 __source: {
                     fileName: "src/components/profile-view/profile-view.jsx",
-                    lineNumber: 89
+                    lineNumber: 91
                 },
                 __self: this,
                 children: "Add some movies to your list"
@@ -45107,7 +45107,7 @@ function ProfileView({ movies  }) {
                     lg: 4,
                     __source: {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 91
+                        lineNumber: 93
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
@@ -45115,7 +45115,7 @@ function ProfileView({ movies  }) {
                         ),
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 92
+                            lineNumber: 94
                         },
                         __self: this
                     }, `${i}-${movieId}`)
@@ -45139,7 +45139,7 @@ function ProfileView({ movies  }) {
                 onHide: handleClose,
                 __source: {
                     fileName: "src/components/profile-view/profile-view.jsx",
-                    lineNumber: 111
+                    lineNumber: 114
                 },
                 __self: this,
                 children: [
@@ -45147,13 +45147,13 @@ function ProfileView({ movies  }) {
                         closeButton: true,
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 112
+                            lineNumber: 115
                         },
                         __self: this,
                         children: /*#__PURE__*/ _jsxRuntime.jsx(_.Modal.Title, {
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 113
+                                lineNumber: 116
                             },
                             __self: this,
                             children: "Delete your Account"
@@ -45162,7 +45162,7 @@ function ProfileView({ movies  }) {
                     /*#__PURE__*/ _jsxRuntime.jsx(_.Modal.Body, {
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 115
+                            lineNumber: 118
                         },
                         __self: this,
                         children: "Are you sure you want to delete your account?"
@@ -45170,7 +45170,7 @@ function ProfileView({ movies  }) {
                     /*#__PURE__*/ _jsxRuntime.jsxs(_.Modal.Footer, {
                         __source: {
                             fileName: "src/components/profile-view/profile-view.jsx",
-                            lineNumber: 116
+                            lineNumber: 119
                         },
                         __self: this,
                         children: [
@@ -45179,7 +45179,7 @@ function ProfileView({ movies  }) {
                                 onClick: handleClose,
                                 __source: {
                                     fileName: "src/components/profile-view/profile-view.jsx",
-                                    lineNumber: 117
+                                    lineNumber: 120
                                 },
                                 __self: this,
                                 children: "Close"
@@ -45189,7 +45189,7 @@ function ProfileView({ movies  }) {
                                 onClick: deleteUser,
                                 __source: {
                                     fileName: "src/components/profile-view/profile-view.jsx",
-                                    lineNumber: 120
+                                    lineNumber: 123
                                 },
                                 __self: this,
                                 children: "Delete"
@@ -45204,14 +45204,23 @@ function ProfileView({ movies  }) {
         children: /*#__PURE__*/ _jsxRuntime.jsxs(_.Container, {
             __source: {
                 fileName: "src/components/profile-view/profile-view.jsx",
-                lineNumber: 131
+                lineNumber: 134
             },
             __self: this,
             children: [
+                /*#__PURE__*/ _jsxRuntime.jsx(_userInfo.UserInfo, {
+                    name: username,
+                    email: email,
+                    __source: {
+                        fileName: "src/components/profile-view/profile-view.jsx",
+                        lineNumber: 135
+                    },
+                    __self: this
+                }),
                 /*#__PURE__*/ _jsxRuntime.jsx("h1", {
                     __source: {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 132
+                        lineNumber: 136
                     },
                     __self: this,
                     children: "Profile Page"
@@ -45219,44 +45228,13 @@ function ProfileView({ movies  }) {
                 /*#__PURE__*/ _jsxRuntime.jsxs(_.Form, {
                     __source: {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 133
+                        lineNumber: 137
                     },
                     __self: this,
                     children: [
                         /*#__PURE__*/ _jsxRuntime.jsxs(_.Form.Group, {
                             className: "mb-3",
                             controlId: "username",
-                            __source: {
-                                fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 134
-                            },
-                            __self: this,
-                            children: [
-                                /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Label, {
-                                    __source: {
-                                        fileName: "src/components/profile-view/profile-view.jsx",
-                                        lineNumber: 135
-                                    },
-                                    __self: this,
-                                    children: "Username:"
-                                }),
-                                /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Control, {
-                                    onChange: (e)=>setUsername(e.target.value)
-                                    ,
-                                    value: username,
-                                    type: "text",
-                                    placeholder: "username",
-                                    __source: {
-                                        fileName: "src/components/profile-view/profile-view.jsx",
-                                        lineNumber: 136
-                                    },
-                                    __self: this
-                                })
-                            ]
-                        }),
-                        /*#__PURE__*/ _jsxRuntime.jsxs(_.Form.Group, {
-                            className: "mb-3",
-                            controlId: "email",
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
                                 lineNumber: 138
@@ -45269,14 +45247,14 @@ function ProfileView({ movies  }) {
                                         lineNumber: 139
                                     },
                                     __self: this,
-                                    children: "Email address"
+                                    children: "Username:"
                                 }),
                                 /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Control, {
-                                    onChange: (e)=>setEmail(e.target.value)
+                                    onChange: (e)=>setUsername(e.target.value)
                                     ,
-                                    value: email,
-                                    type: "email",
-                                    placeholder: "Enter new email",
+                                    value: username,
+                                    type: "text",
+                                    placeholder: "username",
                                     __source: {
                                         fileName: "src/components/profile-view/profile-view.jsx",
                                         lineNumber: 140
@@ -45287,7 +45265,7 @@ function ProfileView({ movies  }) {
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsxs(_.Form.Group, {
                             className: "mb-3",
-                            controlId: "birthday",
+                            controlId: "email",
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
                                 lineNumber: 142
@@ -45300,14 +45278,14 @@ function ProfileView({ movies  }) {
                                         lineNumber: 143
                                     },
                                     __self: this,
-                                    children: "Date of Birth:"
+                                    children: "Email address"
                                 }),
                                 /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Control, {
-                                    onChange: (e)=>setBirthdate(e.target.value)
+                                    onChange: (e)=>setEmail(e.target.value)
                                     ,
-                                    value: birthdate,
-                                    type: "date",
-                                    placeholder: "Date of birth",
+                                    value: email,
+                                    type: "email",
+                                    placeholder: "Enter new email",
                                     __source: {
                                         fileName: "src/components/profile-view/profile-view.jsx",
                                         lineNumber: 144
@@ -45318,7 +45296,7 @@ function ProfileView({ movies  }) {
                         }),
                         /*#__PURE__*/ _jsxRuntime.jsxs(_.Form.Group, {
                             className: "mb-3",
-                            controlId: "password",
+                            controlId: "birthday",
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
                                 lineNumber: 146
@@ -45331,6 +45309,37 @@ function ProfileView({ movies  }) {
                                         lineNumber: 147
                                     },
                                     __self: this,
+                                    children: "Date of Birth:"
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Control, {
+                                    onChange: (e)=>setBirthdate(e.target.value)
+                                    ,
+                                    value: birthdate,
+                                    type: "date",
+                                    placeholder: "Date of birth",
+                                    __source: {
+                                        fileName: "src/components/profile-view/profile-view.jsx",
+                                        lineNumber: 148
+                                    },
+                                    __self: this
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsxs(_.Form.Group, {
+                            className: "mb-3",
+                            controlId: "password",
+                            __source: {
+                                fileName: "src/components/profile-view/profile-view.jsx",
+                                lineNumber: 150
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Label, {
+                                    __source: {
+                                        fileName: "src/components/profile-view/profile-view.jsx",
+                                        lineNumber: 151
+                                    },
+                                    __self: this,
                                     children: "Password"
                                 }),
                                 /*#__PURE__*/ _jsxRuntime.jsx(_.Form.Control, {
@@ -45341,7 +45350,7 @@ function ProfileView({ movies  }) {
                                     placeholder: "Password",
                                     __source: {
                                         fileName: "src/components/profile-view/profile-view.jsx",
-                                        lineNumber: 148
+                                        lineNumber: 152
                                     },
                                     __self: this
                                 })
@@ -45352,7 +45361,7 @@ function ProfileView({ movies  }) {
                             onClick: updateUser,
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 151
+                                lineNumber: 155
                             },
                             __self: this,
                             children: "Update your profile"
@@ -45363,7 +45372,7 @@ function ProfileView({ movies  }) {
                             onClick: handleShow,
                             __source: {
                                 fileName: "src/components/profile-view/profile-view.jsx",
-                                lineNumber: 156
+                                lineNumber: 160
                             },
                             __self: this,
                             children: "Delete your profile"
@@ -45374,14 +45383,14 @@ function ProfileView({ movies  }) {
                 /*#__PURE__*/ _jsxRuntime.jsx("p", {
                     __source: {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 164
+                        lineNumber: 168
                     },
                     __self: this
                 }),
                 /*#__PURE__*/ _jsxRuntime.jsx("h2", {
                     __source: {
                         fileName: "src/components/profile-view/profile-view.jsx",
-                        lineNumber: 165
+                        lineNumber: 169
                     },
                     __self: this,
                     children: "Favorite Movies:"
@@ -45401,7 +45410,60 @@ $RefreshReg$(_c, "ProfileView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-router-dom":"cpyQW","axios":"iYoWk","./profile-view.scss":"gb0ga","react-bootstrap/":"h2YVd","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo","../movie-card/movie-card":"6EiBJ"}],"gb0ga":[function() {},{}],"24Lmb":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-router-dom":"cpyQW","axios":"iYoWk","./profile-view.scss":"gb0ga","react-bootstrap/":"h2YVd","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo","../movie-card/movie-card":"6EiBJ","./user-info":"cK8m8"}],"gb0ga":[function() {},{}],"cK8m8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$94e5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$94e5.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "UserInfo", ()=>UserInfo
+);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function UserInfo({ email , name  }) {
+    return(/*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsxs("p", {
+                __source: {
+                    fileName: "src/components/profile-view/user-info.jsx",
+                    lineNumber: 6
+                },
+                __self: this,
+                children: [
+                    " User: ",
+                    name,
+                    " "
+                ]
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsxs("p", {
+                __source: {
+                    fileName: "src/components/profile-view/user-info.jsx",
+                    lineNumber: 7
+                },
+                __self: this,
+                children: [
+                    " Email: ",
+                    email,
+                    " "
+                ]
+            })
+        ]
+    }));
+}
+_c = UserInfo;
+var _c;
+$RefreshReg$(_c, "UserInfo");
+
+  $parcel$ReactRefreshHelpers$94e5.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo"}],"24Lmb":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$7b09 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -45724,6 +45786,7 @@ parcelHelpers.export(exports, "MenuBar", ()=>MenuBar
 var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _navbarScss = require("./navbar.scss");
 var _ = require("react-bootstrap/");
 function MenuBar({ users  }) {
     const onLoggedOut = ()=>{
@@ -45735,101 +45798,77 @@ function MenuBar({ users  }) {
         if (localStorage.getItem("token")) return localStorage.getItem("token");
         else return false;
     };
-    return(/*#__PURE__*/ _jsxRuntime.jsx(_.Navbar, {
-        className: "main-nav",
-        sticky: "top",
-        bg: "dark",
-        expand: "lg",
-        variant: "dark",
-        __source: {
-            fileName: "src/components/navbar/navbar.jsx",
-            lineNumber: 23
-        },
-        __self: this,
-        children: /*#__PURE__*/ _jsxRuntime.jsxs(_.Container, {
-            __source: {
-                fileName: "src/components/navbar/navbar.jsx",
-                lineNumber: 24
-            },
-            __self: this,
-            children: [
-                /*#__PURE__*/ _jsxRuntime.jsx(_.Navbar.Brand, {
-                    className: "navbar-logo",
-                    href: "/",
+    return(/*#__PURE__*/ _jsxRuntime.jsx(_jsxRuntime.Fragment, {
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsx(_.Nav, {
+                class: "nav",
+                className: "navbar",
+                __source: {
+                    fileName: "src/components/navbar/navbar.jsx",
+                    lineNumber: 27
+                },
+                __self: this,
+                children: /*#__PURE__*/ _jsxRuntime.jsxs(_.Navbar, {
                     __source: {
                         fileName: "src/components/navbar/navbar.jsx",
-                        lineNumber: 25
+                        lineNumber: 28
                     },
                     __self: this,
-                    children: "Flix It Up!"
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx(_.Navbar.Toggle, {
-                    "aria-controls": "responsive-nabar-nav",
-                    __source: {
-                        fileName: "src/components/navbar/navbar.jsx",
-                        lineNumber: 26
-                    },
-                    __self: this
-                }),
-                /*#__PURE__*/ _jsxRuntime.jsx(_.Navbar.Collapse, {
-                    id: "responsive-navbar-nav",
-                    __source: {
-                        fileName: "src/components/navbar/navbar.jsx",
-                        lineNumber: 27
-                    },
-                    __self: this,
-                    children: /*#__PURE__*/ _jsxRuntime.jsxs(_.Nav, {
-                        className: "ms-auto",
-                        __source: {
-                            fileName: "src/components/navbar/navbar.jsx",
-                            lineNumber: 28
-                        },
-                        __self: this,
-                        children: [
-                            isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_.Nav.Link, {
-                                href: `/users/${users}`,
-                                __source: {
-                                    fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 30
-                                },
-                                __self: this,
-                                children: users
-                            }),
-                            isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_.Button, {
-                                variant: "link",
-                                onClick: ()=>{
-                                    this.onLoggedOut();
-                                },
-                                __source: {
-                                    fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 32
-                                },
-                                __self: this,
-                                children: "Logout"
-                            }),
-                            !isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_.Nav.Link, {
-                                href: "/",
-                                __source: {
-                                    fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 35
-                                },
-                                __self: this,
-                                children: "Sign-in"
-                            }),
-                            !isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_.Nav.Link, {
-                                href: "/register",
-                                __source: {
-                                    fileName: "src/components/navbar/navbar.jsx",
-                                    lineNumber: 37
-                                },
-                                __self: this,
-                                children: "Sign-up"
-                            })
-                        ]
-                    })
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_.Navbar.Brand, {
+                            class: "brand_color",
+                            href: "/",
+                            __source: {
+                                fileName: "src/components/navbar/navbar.jsx",
+                                lineNumber: 29
+                            },
+                            __self: this,
+                            children: "Flix It Up"
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsx(_.Navbar.Toggle, {
+                            "aria-controls": "responsive-nabar-nav",
+                            __source: {
+                                fileName: "src/components/navbar/navbar.jsx",
+                                lineNumber: 31
+                            },
+                            __self: this
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsxs(_.Navbar.Collapse, {
+                            id: "responsive-navbar-nav",
+                            __source: {
+                                fileName: "src/components/navbar/navbar.jsx",
+                                lineNumber: 32
+                            },
+                            __self: this,
+                            children: [
+                                isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_.Nav.Link, {
+                                    href: `/users/${users}`,
+                                    class: "link_profile",
+                                    __source: {
+                                        fileName: "src/components/navbar/navbar.jsx",
+                                        lineNumber: 36
+                                    },
+                                    __self: this,
+                                    children: "Profile"
+                                }),
+                                isAuth() && /*#__PURE__*/ _jsxRuntime.jsx(_.Button, {
+                                    variant: "link",
+                                    onClick: ()=>{
+                                        this.onLoggedOut();
+                                    },
+                                    __source: {
+                                        fileName: "src/components/navbar/navbar.jsx",
+                                        lineNumber: 38
+                                    },
+                                    __self: this,
+                                    children: "Logout"
+                                })
+                            ]
+                        })
+                    ]
                 })
-            ]
-        })
+            })
+        ]
     }));
 }
 _c = MenuBar;
@@ -45841,7 +45880,7 @@ $RefreshReg$(_c, "MenuBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"6TuXu","react-bootstrap/":"h2YVd","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo","react/jsx-runtime":"8xIwr"}],"jUTZ8":[function() {},{}],"jdzvJ":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","./navbar.scss":"eqSoH","react-bootstrap/":"h2YVd","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo"}],"eqSoH":[function() {},{}],"jUTZ8":[function() {},{}],"jdzvJ":[function(require,module,exports) {
 'use strict';
 var m = require('react-dom');
 var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./profile-view.scss";
-//import {UpdateView} from "./update-view";
+import {UserInfo} from "./user-info";
 //import {FavoriteView} from "./favorite-view";
 import { MovieCard } from "../movie-card/movie-card";
 
@@ -84,8 +84,10 @@ export function ProfileView({ movies }) {
         if (movies.length + 0) {
     
           return (
+
+            
             <Row className="justify-content-md-center">
-    
+           
               {favoriteMoviesList.length === 0 ? (<h5>Add some movies to your list</h5>) : (
                 favoriteMoviesList.map((movieId, i) => (
                   <Col md={6} lg={4}>
@@ -95,6 +97,7 @@ export function ProfileView({ movies }) {
               )}
     
             </Row>
+          
           )
         }
       }
@@ -129,6 +132,7 @@ const cancelUserModal = () => {
 return (
   <>
     <Container>
+      <UserInfo name={username} email={email}/>
       <h1>Profile Page</h1>
       <Form>
         <Form.Group className="mb-3" controlId="username">

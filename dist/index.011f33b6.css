@@ -2,7 +2,26 @@
 
 
 
-.my-flix {
-  color: steelblue;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right bottom, #1EE18F, #07b801);
+}
+
+.nav {
+  background: #2d1ee1;
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+}
+
+nav-link {
+  color: #e11e70;
+}
+
 /*# sourceMappingURL=index.011f33b6.css.map */
