@@ -28,7 +28,9 @@ export function FavoriteView(props) {
   return (
     <Fragment>
       {favoriteMoviesList.length === 0 ? (
+        
           <p>You have not added any favorite movies yet.</p>
+       
           ) : (
             favoriteMoviesList.map((movies) => {
               return (

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import "./profile-view.scss";
 import {UserInfo} from "./user-info";
-//import {FavoriteView} from "./favorite-view";
+import {FavoriteView} from "./favorite-view";
 import { MovieCard } from "../movie-card/movie-card";
 
 import { Button, Form, Card, Nav, Container, Modal, Row } from "react-bootstrap/";
@@ -88,7 +88,7 @@ export function ProfileView({ movies }) {
             
             <Row className="justify-content-md-center">
            
-              {favoriteMoviesList.length === 0 ? (<h5>Add some movies to your list</h5>) : (
+  {favoriteMoviesList.length === 0 ? (<h5>Add some movies to your list</h5>) :  (
                 favoriteMoviesList.map((movieId, i) => (
                   <Col md={6} lg={4}>
                     <MovieCard key={`${i}-${movieId}`} movies={movies.find(m => m._id == movieId)} />

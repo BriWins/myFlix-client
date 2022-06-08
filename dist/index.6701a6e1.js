@@ -45030,7 +45030,7 @@ var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 var _profileViewScss = require("./profile-view.scss");
 var _userInfo = require("./user-info");
-//import {FavoriteView} from "./favorite-view";
+var _favoriteView = require("./favorite-view");
 var _movieCard = require("../movie-card/movie-card");
 var _ = require("react-bootstrap/");
 var _s = $RefreshSig$();
@@ -45421,7 +45421,7 @@ $RefreshReg$(_c, "ProfileView");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-router-dom":"cpyQW","axios":"iYoWk","./profile-view.scss":"gb0ga","react-bootstrap/":"h2YVd","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo","./user-info":"cK8m8","../movie-card/movie-card":"6EiBJ"}],"gb0ga":[function() {},{}],"cK8m8":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-router-dom":"cpyQW","axios":"iYoWk","./profile-view.scss":"gb0ga","react-bootstrap/":"h2YVd","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo","./user-info":"cK8m8","../movie-card/movie-card":"6EiBJ","./favorite-view":"lKUAX"}],"gb0ga":[function() {},{}],"cK8m8":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$94e5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -45474,7 +45474,168 @@ $RefreshReg$(_c, "UserInfo");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo"}],"24Lmb":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo"}],"lKUAX":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b5b5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b5b5.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "FavoriteView", ()=>FavoriteView
+);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _reactRouterDom = require("react-router-dom");
+var _ = require("react-bootstrap/");
+var _profileViewScss = require("./profile-view.scss");
+function FavoriteView(props) {
+    const { movies , favoriteMovies , currentUser , token  } = props;
+    const favoriteMoviesId = favoriteMovies.map((m)=>m._id
+    );
+    const favoriteMoviesList = movies.filter((m)=>{
+        return favoriteMoviesId.includes(m._id);
+    });
+    const handleMovieDelete = (movieId)=>{
+        _axiosDefault.default.delete(`https://stark-oasis-54313.herokuapp.com/users/${currentUser}/movies/${movieId}`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }).then(()=>{
+            alert(`The movie was successfully deleted.`);
+            window.open('/users/:Username', '_self');
+        }).catch((error)=>console.error(error)
+        );
+    };
+    return(/*#__PURE__*/ _jsxRuntime.jsx(_react.Fragment, {
+        __source: {
+            fileName: "src/components/profile-view/favorite-view.jsx",
+            lineNumber: 29
+        },
+        __self: this,
+        children: favoriteMoviesList.length === 0 ? /*#__PURE__*/ _jsxRuntime.jsx("p", {
+            __source: {
+                fileName: "src/components/profile-view/favorite-view.jsx",
+                lineNumber: 32
+            },
+            __self: this,
+            children: "You have not added any favorite movies yet."
+        }) : favoriteMoviesList.map((movies1)=>{
+            return(/*#__PURE__*/ _jsxRuntime.jsx(_.Col, {
+                xs: 10,
+                sm: 8,
+                md: 6,
+                lg: 4,
+                __source: {
+                    fileName: "src/components/profile-view/favorite-view.jsx",
+                    lineNumber: 37
+                },
+                __self: this,
+                children: /*#__PURE__*/ _jsxRuntime.jsxs(_.Card, {
+                    id: "movie-card",
+                    __source: {
+                        fileName: "src/components/profile-view/favorite-view.jsx",
+                        lineNumber: 38
+                    },
+                    __self: this,
+                    children: [
+                        /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                            to: `/movies/${movies1._id}`,
+                            __source: {
+                                fileName: "src/components/profile-view/favorite-view.jsx",
+                                lineNumber: 39
+                            },
+                            __self: this,
+                            children: /*#__PURE__*/ _jsxRuntime.jsx(_.Card.Img, {
+                                variant: "top",
+                                src: movies1.ImgPath,
+                                __source: {
+                                    fileName: "src/components/profile-view/favorite-view.jsx",
+                                    lineNumber: 40
+                                },
+                                __self: this
+                            })
+                        }),
+                        /*#__PURE__*/ _jsxRuntime.jsxs(_.Card.Body, {
+                            __source: {
+                                fileName: "src/components/profile-view/favorite-view.jsx",
+                                lineNumber: 42
+                            },
+                            __self: this,
+                            children: [
+                                /*#__PURE__*/ _jsxRuntime.jsx(_.Card.Title, {
+                                    __source: {
+                                        fileName: "src/components/profile-view/favorite-view.jsx",
+                                        lineNumber: 43
+                                    },
+                                    __self: this,
+                                    children: movies1.Title
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx(_.Card.Text, {
+                                    __source: {
+                                        fileName: "src/components/profile-view/favorite-view.jsx",
+                                        lineNumber: 44
+                                    },
+                                    __self: this,
+                                    children: movies1.Description
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
+                                    to: `/movies/${movies1._id}`,
+                                    __source: {
+                                        fileName: "src/components/profile-view/favorite-view.jsx",
+                                        lineNumber: 45
+                                    },
+                                    __self: this,
+                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_.Button, {
+                                        className: "button",
+                                        variant: "outline-primary",
+                                        size: "sm",
+                                        __source: {
+                                            fileName: "src/components/profile-view/favorite-view.jsx",
+                                            lineNumber: 46
+                                        },
+                                        __self: this,
+                                        children: "Open"
+                                    })
+                                }),
+                                /*#__PURE__*/ _jsxRuntime.jsx(_.Button, {
+                                    className: "button ml-2",
+                                    variant: "outline-primary",
+                                    size: "sm",
+                                    onClick: ()=>{
+                                        handleMovieDelete(movies1._id);
+                                    },
+                                    __source: {
+                                        fileName: "src/components/profile-view/favorite-view.jsx",
+                                        lineNumber: 48
+                                    },
+                                    __self: this,
+                                    children: "Remove"
+                                })
+                            ]
+                        })
+                    ]
+                })
+            }));
+        })
+    }));
+}
+_c = FavoriteView;
+var _c;
+$RefreshReg$(_c, "FavoriteView");
+
+  $parcel$ReactRefreshHelpers$b5b5.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","prop-types":"1tgq3","axios":"iYoWk","react-router-dom":"cpyQW","react-bootstrap/":"h2YVd","./profile-view.scss":"gb0ga","@parcel/transformer-js/src/esmodule-helpers.js":"fPT0O","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"87tBo"}],"gb0ga":[function() {},{}],"24Lmb":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$7b09 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
