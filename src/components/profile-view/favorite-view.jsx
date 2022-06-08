@@ -30,23 +30,23 @@ export function FavoriteView(props) {
       {favoriteMoviesList.length === 0 ? (
           <p>You have not added any favorite movies yet.</p>
           ) : (
-            favoriteMoviesList.map((movie) => {
+            favoriteMoviesList.map((movies) => {
               return (
               <Col xs={10} sm={8} md={6} lg={4} >
                 <Card id="movie-card">
-                  <Link to={`/movies/${movie._id}`}>
-                    <Card.Img variant="top" src={movie.ImgPath} />
+                  <Link to={`/movies/${movies._id}`}>
+                    <Card.Img variant="top" src={movies.ImgPath} />
                   </Link>
                   <Card.Body>
-                      <Card.Title>{movie.Title}</Card.Title>
-                      <Card.Text>{movie.Description}</Card.Text>
-                        <Link to={`/movies/${movie._id}`}>
+                      <Card.Title>{movies.Title}</Card.Title>
+                      <Card.Text>{movies.Description}</Card.Text>
+                        <Link to={`/movies/${movies._id}`}>
                           <Button className="button" variant="outline-primary" size="sm">Open</Button>
                         </Link>
                         <Button   
                         className="button ml-2" 
                         variant="outline-primary" 
-                        size="sm" onClick={()=> {handleMovieDelete(movie._id)}} >
+                        size="sm" onClick={()=> {handleMovieDelete(movies._id)}} >
                           Remove
                         </Button>
                   </Card.Body>
