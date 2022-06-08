@@ -29,6 +29,9 @@ export class MovieView extends React.Component {
                 <Card.Img crossorigin="anonymous" src={movie.ImgPath} className="movie-image"/>
                 <Card.Title>{movie.Title}</Card.Title>
                 <Card.Text> {movie.Description} </Card.Text>
+                {/* <Card.Text> {movies.ReleaseDate}</Card.Text>
+                <Card.Text> {movies.Rating}</Card.Text>
+                <Card.Text> {movies.Actors}</Card.Text> */}
                 <Link to={`/directors/${movie.Director.Name}`}>
                 <Button variant="link">Director</Button>
                 </Link>
