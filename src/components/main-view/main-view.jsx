@@ -63,10 +63,11 @@ export class MainView extends React.Component {
     const { movies, users } = this.state;
     return (
       <Router>
+         <MenuBar users={users} />
         <Container>
           
 
-          <MenuBar users={users} />
+         
         <Row className="main-view justify-content-md-center">
 
          
