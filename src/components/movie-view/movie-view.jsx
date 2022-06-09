@@ -18,7 +18,7 @@ export class MovieView extends React.Component {
   }
   
   render() {
-    const { movie, onBackClick } = this.props;
+    const { movies, onBackClick } = this.props;
 
     return (
       <Container>
@@ -26,16 +26,16 @@ export class MovieView extends React.Component {
           <Col>
             <Card>
               <Card.Body>
-                <Card.Img crossorigin="anonymous" src={movie.ImgPath} className="movie-image"/>
-                <Card.Title>{movie.Title}</Card.Title>
-                <Card.Text> {movie.Description} </Card.Text>
-                {/* <Card.Text> {movies.ReleaseDate}</Card.Text>
+                <Card.Img crossorigin="anonymous" src={movies.ImgPath} className="movie-image"/>
+                <Card.Title>{movies.Title}</Card.Title>
+                <Card.Text> {movies.Description} </Card.Text>
+                <Card.Text> {movies.ReleaseDate}</Card.Text>
                 <Card.Text> {movies.Rating}</Card.Text>
-                <Card.Text> {movies.Actors}</Card.Text> */}
-                <Link to={`/directors/${movie.Director.Name}`}>
+                <Card.Text> {movies.Actors}</Card.Text>
+                <Link to={`/directors/${movies.Director.Name}`}>
                 <Button variant="link">Director</Button>
                 </Link>
-                <Link to={`/genres/${movie.Genre.Name}`}>
+                <Link to={`/genres/${movies.Genre.Name}`}>
                 <Button variant="link">Genre</Button>
                 </Link>
               </Card.Body>

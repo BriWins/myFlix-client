@@ -44071,7 +44071,7 @@ class MovieView extends _reactDefault.default.Component {
         document.removeEventListener("keypress", this.keypressCallback);
     }
     render() {
-        const { movie , onBackClick  } = this.props;
+        const { movies , onBackClick  } = this.props;
         return(/*#__PURE__*/ _jsxRuntime.jsx(_.Container, {
             __source: {
                 fileName: "src/components/movie-view/movie-view.jsx",
@@ -44106,7 +44106,7 @@ class MovieView extends _reactDefault.default.Component {
                                 children: [
                                     /*#__PURE__*/ _jsxRuntime.jsx(_.Card.Img, {
                                         crossorigin: "anonymous",
-                                        src: movie.ImgPath,
+                                        src: movies.ImgPath,
                                         className: "movie-image",
                                         __source: {
                                             fileName: "src/components/movie-view/movie-view.jsx",
@@ -44120,7 +44120,7 @@ class MovieView extends _reactDefault.default.Component {
                                             lineNumber: 30
                                         },
                                         __self: this,
-                                        children: movie.Title
+                                        children: movies.Title
                                     }),
                                     /*#__PURE__*/ _jsxRuntime.jsxs(_.Card.Text, {
                                         __source: {
@@ -44130,12 +44130,45 @@ class MovieView extends _reactDefault.default.Component {
                                         __self: this,
                                         children: [
                                             " ",
-                                            movie.Description,
+                                            movies.Description,
                                             " "
                                         ]
                                     }),
+                                    /*#__PURE__*/ _jsxRuntime.jsxs(_.Card.Text, {
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 32
+                                        },
+                                        __self: this,
+                                        children: [
+                                            " ",
+                                            movies.ReleaseDate
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsxs(_.Card.Text, {
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 33
+                                        },
+                                        __self: this,
+                                        children: [
+                                            " ",
+                                            movies.Rating
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsxs(_.Card.Text, {
+                                        __source: {
+                                            fileName: "src/components/movie-view/movie-view.jsx",
+                                            lineNumber: 34
+                                        },
+                                        __self: this,
+                                        children: [
+                                            " ",
+                                            movies.Actors
+                                        ]
+                                    }),
                                     /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                        to: `/directors/${movie.Director.Name}`,
+                                        to: `/directors/${movies.Director.Name}`,
                                         __source: {
                                             fileName: "src/components/movie-view/movie-view.jsx",
                                             lineNumber: 35
@@ -44152,7 +44185,7 @@ class MovieView extends _reactDefault.default.Component {
                                         })
                                     }),
                                     /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Link, {
-                                        to: `/genres/${movie.Genre.Name}`,
+                                        to: `/genres/${movies.Genre.Name}`,
                                         __source: {
                                             fileName: "src/components/movie-view/movie-view.jsx",
                                             lineNumber: 38
@@ -44223,9 +44256,9 @@ class MovieCard extends _reactDefault.default.Component {
             __self: this,
             children: [
                 /*#__PURE__*/ _jsxRuntime.jsx(_.Card.Img, {
-                    crossorigin: "anonymous",
                     src: movies.ImgPath,
-                    className: "movie-image",
+                    crossorigin: "anonymous",
+                    variant: "top",
                     onClick: ()=>{
                         onClick.movies;
                     },
@@ -44274,7 +44307,8 @@ class MovieCard extends _reactDefault.default.Component {
                             __self: this,
                             children: /*#__PURE__*/ _jsxRuntime.jsx(_.Button, {
                                 variant: "link",
-                                class: "btn-open",
+                                "d-block": true,
+                                "mt-3": true,
                                 __source: {
                                     fileName: "src/components/movie-card/movie-card.jsx",
                                     lineNumber: 20
