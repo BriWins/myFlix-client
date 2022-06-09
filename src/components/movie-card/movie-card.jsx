@@ -11,13 +11,13 @@ export class MovieCard extends React.Component {
 
     return (
           <Card>
-              <Card.Img crossorigin="anonymous" src={movies.ImgPath} className="movie-image" 
-              onClick={() => {(onClick.movies);}}/>
+              <Card.Img src={movies.ImgPath} crossorigin="anonymous" variant="top"
+                onClick={() => {(onClick.movies);}}/>
               <Card.Body>
                 <Card.Title> {movies.Title} </Card.Title>
                 <Card.Text> {movies.Description}</Card.Text>
                   <Link to={ `/movies/${movies._id}` }>
-                    <Button variant="link">Open</Button>
+                    <Button variant="link" d-block mt-3>Open</Button>
                   </Link>
               </Card.Body>
           </Card>
