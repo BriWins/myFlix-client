@@ -23,5 +23,12 @@ body {
 nav-link {
   color: #e11e70;
 }
+.card {
+  background-color: aqua;
+  margin: 15px;
+  border-radius: 10px;
+  border: none;
+  height: 95%;
+}
 
 /*# sourceMappingURL=index.011f33b6.css.map */
