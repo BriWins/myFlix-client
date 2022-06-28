@@ -1,4 +1,7 @@
 import React from "react";
+import { Card, Row, Container, Col, Button  } from "react-bootstrap/";
+
+import { Link } from "react-router-dom";
 
 export class MovieView extends React.Component {
 
@@ -7,31 +10,44 @@ export class MovieView extends React.Component {
   }
 
   componentDidMount() {
-    document.addEventListener('keypress', this.keypressCallback);
+    document.addEventListener("keypress", this.keypressCallback);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('keypress', this.keypressCallback);
+    document.removeEventListener("keypress", this.keypressCallback);
   }
   
   render() {
-    const { movie, onBackClick } = this.props;
+    const { movies, onBackClick } = this.props;
 
     return (
-      <div className="movie-view">
-        <div className="movie-image">
-          <img src={movie.ImgPath}/>
-        </div>
-        <div className="movie-title">
-          <span className="label">Title: </span>
-          <span className="value">{movie.Title}</span>
-        </div>
-        <div className="movie-summary">
-          <span className="label">Description: </span>
-          <span className="value">{movie.Description}</span>
-        </div>
-      <button onClick={() => { onBackClick(null);}}> Back </button>
-      </div>
+      <Container>
+        <Row>
+          <Col>
+            <Card>
+              <Card.Body>
+                <Card.Img crossorigin="anonymous" src={movies.ImgPath} className="movie-image"/>
+                <Card.Title>{movies.Title}</Card.Title>
+                <Card.Text> {movies.Description} </Card.Text>
+                <Card.Text> {movies.ReleaseDate}</Card.Text>
+                <Card.Text> {movies.Rating}</Card.Text>
+                <Card.Text> {movies.Actors}</Card.Text>
+                <Link to={`/directors/${movies.Director.Name}`}>
+                <Button variant="link">Director</Button>
+                </Link>
+                <Link to={`/genres/${movies.Genre.Name}`}>
+                <Button variant="link">Genre</Button>
+                </Link>
+              </Card.Body>
+              <Button onClick={() => { onBackClick(null);}}> Back </Button>
+            </Card>
+        </Col>
+      </Row>
+    </Container>
     );
   }
+
+ 
+
+
 }
