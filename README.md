@@ -1,6 +1,6 @@
-# myFlix-client
+# Flix It Up-client
 
-### myFlix-client entails the client-side portion of Flix It Up Application. myFlix-client utilizes the React framework to meet the information needs of Flix It Up users. The client-side includes several interface views built using the React library that will handle data through the previously-defined REST API endpoints.
+### Flix It Up-client entails the client-side portion of Flix It Up Application. myFlix-client utilizes the React framework to meet the information needs of Flix It Up users. The client-side includes several interface views built using the React library that will handle data through the previously-defined REST API endpoints.
 
 ## Technical Requirements
 
